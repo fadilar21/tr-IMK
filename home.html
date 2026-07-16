@@ -10,10 +10,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* =========================================================
-   VALKYRIE — Gaming Gear UI
-   Design tokens
-   ========================================================= */
+
+
 :root{
   --bg-void: #07040f;
   --bg-panel: rgba(20, 12, 36, 0.55);
@@ -53,16 +51,14 @@ body{
 
 a{ text-decoration: none; }
 
-/* ---------------------------------------------------------
-   Reusable background layer
-   --------------------------------------------------------- */
+
 .bg-scene{
   position: fixed;
   inset: 0;
   z-index: -2;
   background-image:
     linear-gradient(180deg, rgba(7,4,15,0.55) 0%, rgba(7,4,15,0.85) 55%, #07040f 100%),
-    url('../assets/bg.png');
+    url('bg.png');
   background-size: cover;
   background-position: center;
   animation: bgDrift 30s ease-in-out infinite alternate;
@@ -83,9 +79,7 @@ a{ text-decoration: none; }
     radial-gradient(500px 380px at 85% 75%, rgba(236,72,153,0.16), transparent 60%);
 }
 
-/* ---------------------------------------------------------
-   Brand / logo
-   --------------------------------------------------------- */
+
 .brand{
   display: flex;
   align-items: center;
@@ -115,9 +109,7 @@ a{ text-decoration: none; }
   50%      { transform: translateY(-6px); }
 }
 
-/* ---------------------------------------------------------
-   Fade / rise entrance animations
-   --------------------------------------------------------- */
+
 .fade-up{
   opacity: 0;
   transform: translateY(24px);
@@ -132,9 +124,7 @@ a{ text-decoration: none; }
 .delay-4{ animation-delay: .48s; }
 .delay-5{ animation-delay: .6s; }
 
-/* ---------------------------------------------------------
-   Glass card (login / register)
-   --------------------------------------------------------- */
+
 .glass-card{
   background: var(--bg-panel);
   border: 1px solid var(--border-soft);
@@ -187,9 +177,7 @@ a{ text-decoration: none; }
 }
 .toggle-eye:hover{ color: var(--purple-400); }
 
-/* ---------------------------------------------------------
-   Buttons
-   --------------------------------------------------------- */
+
 .btn-vk{
   display: inline-flex;
   align-items: center;
@@ -266,9 +254,7 @@ a{ text-decoration: none; }
   background: rgba(255,255,255,0.1);
 }
 
-/* ---------------------------------------------------------
-   SPLASH PAGE
-   --------------------------------------------------------- */
+
 .splash-wrap{
   min-height: 100vh;
   display: flex;
@@ -300,9 +286,7 @@ a{ text-decoration: none; }
 
 .splash-wrap .btn-vk{ width: auto; padding: .9rem 2.4rem; }
 
-/* ---------------------------------------------------------
-   AUTH (login / register) layout
-   --------------------------------------------------------- */
+
 .auth-wrap{
   min-height: 100vh;
   display: flex;
@@ -328,9 +312,7 @@ a{ text-decoration: none; }
   margin-bottom: 1.6rem;
 }
 
-/* ---------------------------------------------------------
-   HOME PAGE / NAVBAR
-   --------------------------------------------------------- */
+
 .vk-navbar{
   background: rgba(10, 6, 20, 0.75);
   backdrop-filter: blur(14px);
@@ -421,7 +403,7 @@ a{ text-decoration: none; }
   border-radius: var(--radius-lg);
   background:
     linear-gradient(120deg, rgba(10,6,22,0.92) 20%, rgba(10,6,22,0.35) 60%),
-    url('../assets/bg.png');
+    url('benner home.png');
   background-size: cover;
   background-position: center;
   padding: 2.4rem;
@@ -431,6 +413,21 @@ a{ text-decoration: none; }
   display: flex;
   align-items: center;
 }
+
+.right-panel{
+  position: relative;
+}
+.flash-sale{
+  background: rgba(20,12,36,0.6);
+  border-radius: var(--radius-md);
+  padding: .9rem;
+  border: 1px solid rgba(168,85,247,0.12);
+}
+.flash-item{ display:flex; gap:.6rem; align-items:center; padding:.5rem 0; border-bottom:1px solid rgba(255,255,255,0.03);} 
+.flash-item:last-child{ border-bottom:none; }
+.flash-item img{ width:56px; height:44px; object-fit:cover; border-radius:8px; }
+.flash-item .meta{ font-size:.85rem; }
+.flash-item .price{ color:var(--purple-400); font-weight:700; }
 .hero-banner::after{
   content: "";
   position: absolute;
@@ -458,7 +455,7 @@ a{ text-decoration: none; }
 }
 .hero-banner .btn-vk{ width: auto; padding: .75rem 1.8rem; margin-top: 1rem; }
 
-/* Category pills */
+
 .cat-pill{
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(168,85,247,0.2);
@@ -520,7 +517,6 @@ a{ text-decoration: none; }
   margin-left: .4rem;
 }
 
-/* scroll reveal */
 .reveal{
   opacity: 0;
   transform: translateY(30px);
@@ -531,7 +527,6 @@ a{ text-decoration: none; }
   transform: translateY(0);
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar{ width: 8px; }
 ::-webkit-scrollbar-track{ background: var(--bg-void); }
 ::-webkit-scrollbar-thumb{ background: var(--purple-500); border-radius: 8px; }
@@ -547,14 +542,12 @@ a{ text-decoration: none; }
 <div class="bg-scene" style="opacity:.5;"></div>
 <div class="bg-glow"></div>
 
-<!-- NAVBAR -->
 <nav class="vk-navbar py-2">
   <div class="container-fluid px-3 px-md-4">
     <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
 
       <div class="brand" style="justify-content:flex-start;">
-        <img src="assets/logo.png" alt="Valkyrie" style="height:34px;">
-        <span class="brand-name" style="font-size:1.1rem; letter-spacing:2px;">VALKYRIE</span>
+        <img src="namalogo.png" alt="Valkyrie" style="height:34px;">
       </div>
 
       <form class="d-none d-md-flex flex-grow-1 mx-4" style="max-width:420px;" onsubmit="return false;">
@@ -573,7 +566,7 @@ a{ text-decoration: none; }
 <main class="container-fluid px-3 px-md-4 py-4">
   <div class="row g-4">
 
-    <!-- SIDEBAR -->
+
     <aside class="col-md-3 col-lg-2" id="sidebarCol">
       <div class="vk-sidebar">
         <a href="home.html" class="side-link active"><i class="fa-solid fa-house"></i> Home</a>
@@ -584,22 +577,24 @@ a{ text-decoration: none; }
         <a href="#" class="side-link"><i class="fa-solid fa-headset"></i> Support</a>
         <a href="#" class="side-link"><i class="fa-solid fa-gear"></i> Setting</a>
       </div>
+      <div style="display:flex; justify-content:center; margin-top:1.6rem;">
+        <img src="logo.png" alt="brand" style="height:74px; opacity:.85; filter:drop-shadow(0 10px 30px rgba(0,0,0,0.6));">
+      </div>
     </aside>
 
     <!-- MAIN CONTENT -->
-    <section class="col-md-9 col-lg-10">
+    <section class="col-md-6 col-lg-7">
 
-      <!-- HERO -->
       <div class="hero-banner reveal">
         <div style="position:relative; z-index:1;" class="fade-up">
           <div class="hero-eyebrow">Flash Sale</div>
-          <h1 class="hero-title">LEVEL UP<br>YOUR GAME <span class="accent">UP TO 50% OFF</span></h1>
+          <h1 class="hero-title">LEVEL UP<br>YOUR GAME </h1>
+          <h1 class="hero-title"> <span class="accent">UP TO 50% OFF</span></h1>
           <p style="color:var(--text-mid); max-width:420px;">Upgrade rig-mu dengan gear pilihan untuk performa maksimal di setiap match.</p>
-          <a href="#products" class="btn-vk">Shop Now <i class="fa-solid fa-arrow-right arrow"></i></a>
+          <img="banner home.png" class="btn-vk">Shop Now <i class="fa-solid fa-arrow-right arrow"></i></a>
         </div>
       </div>
 
-      <!-- CATEGORIES -->
       <div class="row g-3 mt-1 reveal">
         <div class="col-4 col-md-2"><a href="#" class="cat-pill"><i class="fa-solid fa-keyboard"></i>Keyboard</a></div>
         <div class="col-4 col-md-2"><a href="#" class="cat-pill"><i class="fa-solid fa-computer-mouse"></i>Mouse</a></div>
@@ -670,6 +665,40 @@ a{ text-decoration: none; }
       </div>
 
     </section>
+
+    <!-- RIGHT PANEL: Flash Sale -->
+    <aside class="col-md-3 col-lg-3 right-panel">
+      <div class="flash-sale reveal">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:.6rem;">
+          <strong>Flash Sale</strong>
+          <small style="color:var(--text-low);">02 : 14 : 57</small>
+        </div>
+
+        <div class="flash-item">
+          <img src="keyboard.jpg" alt="item">
+          <div class="meta">
+            <div style="font-weight:700;">Razer BlackWidow V3</div>
+            <div class="price">Rp 1.299.000</div>
+          </div>
+        </div>
+
+        <div class="flash-item">
+          <img src="keyboard2.jpg" alt="item">
+          <div class="meta">
+            <div style="font-weight:700;">Logitech G Pro X Superlight</div>
+            <div class="price">Rp 1.299.000</div>
+          </div>
+        </div>
+
+        <div class="flash-item">
+          <img src="keyboard.jpg" alt="item">
+          <div class="meta">
+            <div style="font-weight:700;">Corsair K95 RGB</div>
+            <div class="price">Rp 3.499.000</div>
+          </div>
+        </div>
+      </div>
+    </aside>
   </div>
 </main>
 
