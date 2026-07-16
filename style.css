@@ -245,4 +245,4496 @@ html, body {
         font-size: 1.4rem;
     }
 }
->>>>>>> c2382aaed513c23ad3e88b00a33335b00f0b5cfc
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
+    }
+    .brand-name {
+        font-size: 1.4rem;
+    }
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* Trik Efek Ikon di Input */
+.input-icon {
+    position: absolute;
+    left: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.input-icon-end {
+    position: absolute;
+    right: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Link Navigasi & Lupa Password */
+.forgot-link, .signup-link {
+    color: var(--neon-purple) !important;
+    font-size: 0.85rem;
+    transition: opacity 0.2s;
+}
+
+.forgot-link:hover, .signup-link:hover {
+    opacity: 0.8;
+}
+
+/* Garis Pembatas OR */
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.separator:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.separator:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Tombol Sosial Media (SSO Google & Discord) */
+.btn-sso {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 100%;
+}
+
+.btn-sso:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+/* ==========================================================================
