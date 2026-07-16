@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -761,4 +762,908 @@
     updatePriceRange();
   </script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valkyrie Gaming Store</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* CUSTOM CSS THEME STYLING */
+    :root {
+      --bg-dark: #0a0d14;
+      --bg-sidebar: #111420;
+      --bg-card: #161a2b;
+      --accent-purple: #6f42c1;
+      --accent-purple-hover: #59359a;
+      --text-gray: #a0a5b5;
+      --transition-fast: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: #ffffff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--bg-dark);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--accent-purple);
+      border-radius: 3px;
+    }
+
+    /* Sidebar Layout */
+    .sidebar {
+      display: none;
+    }
+
+    .brand-area {
+      display: none;
+    }
+
+    .brand-logo-img {
+      height: 24px;
+      object-fit: contain;
+    }
+
+    .nav-link-custom {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      color: var(--text-gray);
+      text-decoration: none;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      transition: var(--transition-fast);
+      font-weight: 500;
+    }
+
+    .nav-link-custom i {
+      font-size: 1.25rem;
+      margin-right: 1rem;
+    }
+
+    .nav-link-custom:hover, .nav-link-custom.active {
+      background-color: rgba(111, 66, 193, 0.15);
+      color: #ffffff;
+      transform: translateX(5px);
+    }
+
+    .nav-link-custom.active {
+      border-left: 4px solid var(--accent-purple);
+      color: #ffffff !important;
+    }
+
+    .sidebar-footer-logo {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      opacity: 0.15;
+      max-width: 120px;
+    }
+
+    /* Main Content Layout */
+    .main-content {
+      margin-left: 0;
+      padding: 2rem;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Top Header */
+    .top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .search-container {
+      position: relative;
+    }
+
+    .search-input {
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: white;
+      border-radius: 8px;
+      padding: 0.6rem 1.5rem;
+      width: 400px;
+      transition: var(--transition-fast);
+    }
+
+    .search-input:focus {
+      background-color: rgba(255, 255, 255, 0.08);
+      border-color: var(--accent-purple);
+      box-shadow: 0 0 10px rgba(111, 66, 193, 0.3);
+      outline: none;
+      color: white;
+    }
+
+    /* Filter Sidebar */
+    .filter-section {
+      background-color: var(--bg-sidebar);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .filter-title {
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-gray);
+      margin-bottom: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    /* Product Cards */
+    .product-card {
+      background: linear-gradient(180deg, rgba(22, 26, 43, 0.98), rgba(16, 19, 34, 0.96));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02), 0 18px 45px rgba(0,0,0,0.22);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      position: relative;
+      cursor: pointer;
+      padding-bottom: 3.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04), 0 24px 60px rgba(0,0,0,0.28);
+      border-color: rgba(111, 66, 193, 0.35);
+    }
+
+    .product-card:hover .product-img {
+      background: rgba(111, 66, 193, 0.08);
+    }
+
+    .product-card .product-img {
+      min-height: 240px;
+      max-height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      transition: background 0.3s ease;
+    }
+
+    .product-card .product-img img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .product-card:hover .product-img img {
+      transform: scale(1.02);
+    }
+
+    .badge-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      font-size: 0.72rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 10px;
+      text-transform: uppercase;
+      font-weight: 700;
+      z-index: 2;
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.3);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+      transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+      background: linear-gradient(135deg, rgba(111, 66, 193, 0.95), rgba(70, 47, 155, 0.95));
+      text-shadow: 0 2px 10px rgba(0,0,0,0.25);
+      backdrop-filter: blur(8px);
+    }
+
+    .badge-tag:hover {
+      transform: translateY(-1px) scale(1.02);
+      box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
+    }
+
+    .card-heart-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: none;
+      border: none;
+      color: var(--text-gray);
+      transition: var(--transition-fast);
+    }
+
+    .card-heart-btn:hover {
+      color: #ff4d4d;
+    }
+
+    /* Valkyrie Utility Buttons */
+    .btn-valkyrie {
+      background-color: var(--accent-purple);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 0.6rem 1.5rem;
+      font-weight: 600;
+      transition: var(--transition-fast);
+    }
+
+    .btn-valkyrie:hover {
+      background-color: var(--accent-purple-hover);
+      color: white;
+    }
+
+    /* Hero Banner Area */
+    .hero-banner {
+      position: relative;
+      overflow: hidden;
+      min-height: 320px;
+      background: transparent;
+    }
+
+    .hero-svg-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.55;
+      filter: brightness(0.95) contrast(1.05) saturate(1.05);
+      transform: scale(1.02);
+      transition: opacity 0.3s ease, transform 0.5s ease;
+      pointer-events: none;
+    }
+
+    .hero-banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10, 13, 20, 0.22), rgba(10, 13, 20, 0.72));
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 560px;
+    }
+
+    /* Detail Product Custom Switch */
+    .switch-option {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      padding: 0.6rem 1.2rem;
+      cursor: pointer;
+      min-width: 100px;
+      text-align: center;
+      transition: var(--transition-fast);
+      background-color: rgba(255,255,255,0.02);
+    }
+
+    .switch-option:hover, .switch-option.active {
+      border-color: var(--accent-purple);
+      background-color: rgba(111, 66, 193, 0.15);
+    }
+
+    /* Comparison Styling */
+    .comparison-table {
+      background-color: var(--bg-sidebar);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .comparison-table th, .comparison-table td {
+      border-color: rgba(255, 255, 255, 0.05) !important;
+      padding: 1.25rem !important;
+      vertical-align: middle;
+    }
+
+    /* Form Checks & Sliders Customization */
+    .form-check-input:checked {
+      background-color: var(--accent-purple);
+      border-color: var(--accent-purple);
+    }
+
+    .form-range::-webkit-slider-thumb {
+      background: var(--accent-purple);
+    }
+
+    /* SPA Transition Animation */
+    .page-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    }
+
+    .page-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .brand-name {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+    }
+
+    .form-range {
+      height: 10px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, rgba(111, 66, 193, 0.75) 70%, rgba(255,255,255,0.12) 70%);
+      transition: background 0.3s ease;
+    }
+
+    .form-range::-webkit-slider-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--accent-purple);
+      border: 2px solid rgba(255,255,255,0.15);
+      box-shadow: 0 0 0 8px rgba(111, 66, 193, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-range::-webkit-slider-thumb:hover {
+      transform: scale(1.08);
+    }
+
+    .form-range::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 95%;
+      background: var(--accent-purple);
+      border: 2px solid rgba(255,255,255,0.15);
+      box-shadow: 0 0 0 8px rgba(111, 66, 193, 0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .product-card img {
+      width: auto;
+      height: auto;
+      max-height: 240px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .product-card .badge-tag {
+      z-index: 2;
+    }
+
+    .product-card .product-img {
+      min-height: 240px;
+      max-height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      background: linear-gradient(135deg, rgba(111, 66, 193, 0.12), rgba(255,255,255,0.03));
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .product-card .product-img img,
+    .product-card > img.img-fluid {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      width: auto;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .product-card > img.img-fluid {
+      padding: 1rem;
+      background: linear-gradient(135deg, rgba(111, 66, 193, 0.12), rgba(255,255,255,0.03));
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 1rem;
+    }
+
+    .badge-discount {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #ffb3b3;
+      background: rgba(255, 80, 80, 0.18);
+      border: 1px solid rgba(255, 80, 80, 0.35);
+      border-radius: 999px;
+      padding: 0.2rem 0.55rem;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar navigation (hidden by CSS) -->
+  <aside class="sidebar">
+    <div class="brand-area">
+      <span class="brand-name">VALKYRIE</span>
+    </div>
+    <nav class="nav flex-column">
+      <a href="#" id="link-home" class="nav-link-custom active" onclick="switchPage('home')">
+        <i class="bi bi-house-door"></i> Home
+      </a>
+      <a href="#" id="link-search" class="nav-link-custom" onclick="switchPage('search')">
+        <i class="bi bi-search"></i> Search
+      </a>
+      <a href="#" id="link-compare" class="nav-link-custom" onclick="switchPage('compare')">
+        <i class="bi bi-arrow-left-right"></i> Compare
+      </a>
+      <a href="#" class="nav-link-custom"><i class="bi bi-heart"></i> Wishlist</a>
+      <a href="#" class="nav-link-custom"><i class="bi bi-cart"></i> Cart</a>
+      <a href="#" class="nav-link-custom"><i class="bi bi-truck"></i> Track Order</a>
+      <a href="#" class="nav-link-custom"><i class="bi bi-layers"></i> Setup Builder</a>
+      <a href="#" class="nav-link-custom"><i class="bi bi-trophy"></i> Achievement</a>
+      <a href="#" class="nav-link-custom"><i class="bi bi-person"></i> Profile</a>
+      <a href="#" class="nav-link-custom"><i class="bi bi-chat-left-text"></i> Review</a>
+    </nav>
+  </aside>
+
+  <!-- Main page content -->
+  <main class="main-content">
+    
+    <header class="top-header">
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search products...">
+      </div>
+      <div class="d-flex align-items-center gap-4">
+        <button class="btn btn-link text-white p-0"><i class="bi bi-search fs-5"></i></button>
+        <button class="btn btn-link text-white p-0 position-relative" onclick="triggerCartAnim()">
+          <i class="bi bi-cart3 fs-5"></i>
+        </button>
+        <img src="profile.png" alt="User" class="rounded-circle" style="width: 35px; height: 35px; border: 2px solid var(--accent-purple);">
+        <button class="btn btn-link text-white p-0"><i class="bi bi-x-lg fs-5"></i></button>
+      </div>
+    </header>
+
+    <section id="page-home" class="page-section visible">
+      <h3 class="fw-bold mb-1">Recomentation For You</h3>
+      <p class="text-secondary mb-4">Based on your preferences</p>
+      
+      <div class="row g-4 mb-5">
+        <div class="col-md-4">
+          <div class="product-card p-3" onclick="viewProductDetail()">
+            <span class="badge bg-purple badge-tag">Best Seller</span>
+            <div class="product-img">
+              <img src="item Razer BlackWidow V3.png" class="img-fluid" alt="Razer BlackWidow V3">
+            </div>
+            <p class="text-secondary mb-1" style="font-size: 0.75rem;">Razer</p>
+            <h6 class="fw-bold text-white">Razer BlackWidow V3</h6>
+            <div class="text-warning mb-2" style="font-size: 0.8rem;"><i class="bi bi-star-fill"></i> 4.8</div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-bold text-white">Rp 1.299.000</span><span class="badge-discount">-19%</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="product-card p-3" onclick="viewProductDetail()">
+            <span class="badge bg-info badge-tag">Popular</span>
+            <div class="product-img">
+              <img src="item Logitech.png" class="img-fluid" alt="Logitech G Pro X">
+            </div>
+            <p class="text-secondary mb-1" style="font-size: 0.75rem;">Logitech</p>
+            <h6 class="fw-bold text-white">Logitech G Pro X</h6>
+            <div class="text-warning mb-2" style="font-size: 0.8rem;"><i class="bi bi-star-fill"></i> 4.8</div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-bold text-white">Rp 1.890.000</span><span class="badge-discount">-10%</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="product-card p-3" onclick="viewProductDetail()">
+            <span class="badge bg-purple badge-tag" style="background-color: var(--accent-purple);">Monitor</span>
+            <div class="product-img">
+              <img src="item Asus ROG.png" class="img-fluid" alt="ASUS ROG Swift PG279QM">
+            </div>
+            <p class="text-secondary mb-1" style="font-size: 0.75rem;">ASUS</p>
+            <h6 class="fw-bold text-white">ASUS ROG Swift PG279QM</h6>
+            <div class="text-warning mb-2" style="font-size: 0.8rem;"><i class="bi bi-star-fill"></i> 4.8</div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-bold text-white">Rp 16.799.000</span><span class="badge-discount">-7%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="product-card p-3" onclick="viewProductDetail()">
+            <span class="badge bg-info badge-tag">Bundle</span>
+            <div class="product-img">
+              <img src="item PC Full Set.png" class="img-fluid" alt="PC Full set 24 INC GAMING RYZEN 5">
+            </div>
+            <p class="text-secondary mb-1" style="font-size: 0.75rem;">Corsair</p>
+            <h6 class="fw-bold text-white">PC Full set 24 INC GAMING RYZEN 5</h6>
+            <div class="text-warning mb-2" style="font-size: 0.8rem;"><i class="bi bi-star-fill"></i> 4.9</div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-bold text-white">Rp 3.499.000</span><span class="badge-discount">-9%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="product-card p-3" onclick="viewProductDetail()">
+            <span class="badge bg-primary badge-tag">Premium</span>
+            <div class="product-img">
+              <img src="item Logitech.png"
+                   class="img-fluid"
+                   alt="Logitech G502 HERO">
+            </div>
+            <p class="text-secondary mb-1" style="font-size: 0.75rem;">Logitech</p>
+            <h6 class="fw-bold text-white">Logitech G502 HERO</h6>
+            <div class="text-warning mb-2" style="font-size: 0.8rem;"><i class="bi bi-star-fill"></i> 4.7</div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-bold text-white">Rp 1.450.000</span><span class="badge-discount">-10%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="product-card p-3" onclick="viewProductDetail()">
+            <span class="badge bg-info badge-tag">New</span>
+            <div class="product-img">
+              <img src="item Razer Kraken.png" class="img-fluid" alt="Razer Kraken V4 Pro">
+            </div>
+            <p class="text-secondary mb-1" style="font-size: 0.75rem;">Razer</p>
+            <h6 class="fw-bold text-white">Razer Kraken V4 Pro</h6>
+            <div class="text-warning mb-2" style="font-size: 0.8rem;"><i class="bi bi-star-fill"></i> 4.7</div>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fw-bold text-white">Rp 3.499.000</span><span class="badge-discount">-15%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-banner p-5 d-flex align-items-center position-relative">
+        <img src="bawah.svg" class="hero-svg-bg" alt="Promo background">
+        <div class="hero-content z-index-2">
+          <h1 class="fw-bold mb-3" style="font-size: 2.3rem;">Level Up Your Gaming Experience</h1>
+          <p class="text-secondary mb-4" style="max-width: 500px;">Discover premium gaming gear with exclusive deals and personalized recommendations.</p>
+          <button class="btn btn-valkyrie btn-lg px-4" style="font-size: 1rem;">Shop Now</button>
+        </div>
+      </div>
+    </section>
+ 
+    <section id="page-search" class="page-section d-none">
+      <div class="row g-4">
+        <div class="col-lg-3">
+          <div class="filter-section">
+            <h6 class="fw-bold mb-3 d-flex justify-content-between align-items-center">
+              Filters <i class="bi bi-sliders text-secondary"></i>
+            </h6>
+            
+            <div class="filter-title">Category</div>
+            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" checked id="c1"><label class="form-check-label text-light" for="c1">All Products</label></div>
+            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="c2"><label class="form-check-label text-secondary" for="c2">Keyboard</label></div>
+            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="c3"><label class="form-check-label text-secondary" for="c3">Mouse</label></div>
+            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="c4"><label class="form-check-label text-secondary" for="c4">Headset</label></div>
+            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="c5"><label class="form-check-label text-secondary" for="c5">Monitor</label></div>
+
+            <div class="filter-title">Brand</div>
+            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="b1"><label class="form-check-label text-secondary" for="b1">Razer</label></div>
+            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="b2"><label class="form-check-label text-secondary" for="b2">Logitech</label></div>
+            <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="b3"><label class="form-check-label text-secondary" for="b3">SteelSeries</label></div>
+
+            <div class="filter-title">Price Range</div>
+            <input id="priceRange" type="range" class="form-range" min="0" max="100" value="70">
+            <div id="priceRangeValue" class="range-output">Max price: Rp 7.000.000</div>
+            <div class="d-flex justify-content-between text-secondary" style="font-size: 0.75rem;">
+              <span>Rp 0</span><span>Rp 10.0M</span>
+            </div>
+
+            <div class="filter-title">Min. Rating</div>
+            <div class="text-warning small mb-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <div class="text-warning small mb-1"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+          </div>
+        </div>
+
+        <div class="col-lg-9">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="product-card p-3" onclick="viewProductDetail()">
+                <span class="badge bg-primary badge-tag">Premium</span>
+                <div class="product-img">
+                  <img src="item HyperX  Alloy Origins.png"
+                       onerror="this.onerror=null; this.src='item HyperX Alloy Origins.png';"
+                       class="img-fluid" alt="HyperX Alloy Origins Premium">
+                </div>
+                <p class="text-secondary mb-1" style="font-size: 0.75rem;">SteelSeries</p>
+                <h6 class="fw-bold text-white">HyperX Alloy Origins Premium</h6>
+                <div class="text-warning mb-2" style="font-size: 0.8rem;"><i class="bi bi-star-fill"></i> 4.6</div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold text-white">Rp 3.499.000</span><span class="badge-discount">-12%</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="product-card p-3">
+                <span class="badge bg-info badge-tag">Popular</span>
+                <div class="product-img">
+                  <img src="item Logitech.png" class="img-fluid" alt="Logitech G Pro X">
+                </div>
+                <p class="text-secondary mb-1" style="font-size: 0.75rem;">Logitech</p>
+                <h6 class="fw-bold text-white">Logitech G Pro X</h6>
+                <div class="text-warning mb-2" style="font-size: 0.8rem;"><i class="bi bi-star-fill"></i> 4.8</div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold text-white">Rp 1.890.000</span><span class="badge-discount">-10%</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="product-card p-3">
+                <span class="badge bg-purple badge-tag" style="background-color: var(--accent-purple);">Monitor</span>
+                <div class="product-img">
+                  <img src="item Asus ROG.png" class="img-fluid" alt="ASUS ROG Swift PG279QM">
+                </div>
+                <p class="text-secondary mb-1" style="font-size: 0.75rem;">ASUS</p>
+                <h6 class="fw-bold text-white">ASUS ROG Swift PG279QM</h6>
+                <div class="text-warning mb-2" style="font-size: 0.8rem;"><i class="bi bi-star-fill"></i> 4.8</div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold text-white">Rp 16.799.000</span><span class="badge-discount">-7%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="product-card p-3" onclick="viewProductDetail()">
+                <span class="badge bg-info badge-tag">Bundle</span>
+                <div class="product-img">
+                  <img src="item PC Full Set.png" class="img-fluid" alt="PC Full set 24 INC GAMING RYZEN 5">
+                </div>
+                <p class="text-secondary mb-1" style="font-size: 0.75rem;">Corsair</p>
+                <h6 class="fw-bold text-white">PC Full set 24 INC GAMING RYZEN 5</h6>
+                <div class="text-warning mb-2" style="font-size: 0.8rem;"><i class="bi bi-star-fill"></i> 4.9</div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold text-white">Rp 3.499.000</span><span class="badge-discount">-9%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="product-card p-3" onclick="viewProductDetail()">
+                <span class="badge bg-purple badge-tag">Best Seller</span>
+                <div class="product-img">
+                  <img src="item Razer BlackWidow V3.png" class="img-fluid" alt="Razer BlackWidow V3">
+                </div>
+                <p class="text-secondary mb-1" style="font-size: 0.75rem;">Razer</p>
+                <h6 class="fw-bold text-white">Razer BlackWidow V3</h6>
+                <div class="text-warning mb-2" style="font-size: 0.8rem;"><i class="bi bi-star-fill"></i> 4.8</div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold text-white">Rp 1.299.000</span><span class="badge-discount">-19%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="product-card p-3" onclick="viewProductDetail()">
+                <span class="badge bg-info badge-tag">New</span>
+                <div class="product-img">
+                  <img src="item Razer Kraken.png" class="img-fluid" alt="Razer Kraken V4 Pro">
+                </div>
+                <p class="text-secondary mb-1" style="font-size: 0.75rem;">Razer</p>
+                <h6 class="fw-bold text-white">Razer Kraken V4 Pro</h6>
+                <div class="text-warning mb-2" style="font-size: 0.8rem;"><i class="bi bi-star-fill"></i> 4.7</div>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="fw-bold text-white">Rp 3.499.000</span><span class="badge-discount">-15%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- page detail -->
+    <section id="page-detail" class="page-section d-none">
+      <div class="text-secondary small mb-3">Home / Keyboard / Razer BlackWidow V3</div>
+      
+      <div class="row g-5">
+        <div class="col-md-6">
+          <div class="p-4 rounded text-center mb-3" style="background-color: var(--bg-sidebar); border: 1px solid rgba(255, 255, 255, 0.05);">
+            <img id="detailMainImg" src="item Razer BlackWidow V3.png" class="img-fluid" alt="" style="max-height: 320px; object-fit: contain; width: 100%;">
+          </div>
+          <div class="d-flex gap-2">
+            <div class="border border-secondary rounded p-1 opacity-70" style="width: 65px; height: 65px; cursor:pointer;" onclick="changeDetailImage('keyboard.jpg')"><img src="./keyboard.jpg" class="w-100 h-100 style" style="object-fit: cover;"></div>
+            <div class="border border-secondary rounded p-1 opacity-70" style="width: 65px; height: 65px; cursor:pointer;" onclick="changeDetailImage('keyboard2.jpg')"><img src="./keyboard2.jpg" class="w-100 h-100 style" style="object-fit: cover;"></div>
+            <div class="border border-secondary rounded p-1 opacity-70 d-flex align-items-center justify-content-center" style="width: 65px; height: 65px; background: rgba(255,255,255,0.02);"><i class="bi bi-heart fs-4 text-warning"></i></div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <h2 class="fw-bold mb-1">Razer BlackWidow V3</h2>
+          <p class="text-secondary mb-3">Mechanical Gaming Keyboard</p>
+          
+          <div class="d-flex align-items-center gap-2 mb-4">
+            <span class="text-warning"><i class="bi bi-star-fill"></i> 4.8 (230)</span>
+            <span class="text-secondary">|</span>
+            <span class="text-secondary">Terjual 1.2K</span>
+          </div>
+
+          <h3 class="fw-bold text-white mb-4">Rp1.299.000</h3>
+          
+          <div class="mb-4">
+            <div class="text-secondary small mb-2">Switch Type</div>
+            <div class="d-flex gap-2">
+              <div class="switch-option active" onclick="toggleSwitch(this)">Razer Green</div>
+              <div class="switch-option" onclick="toggleSwitch(this)">Razer Yellow</div>
+              <div class="switch-option" onclick="toggleSwitch(this)">Razer Orange</div>
+            </div>
+          </div>
+
+          <div class="text-secondary small mb-3">Stock: 15 Tersedia</div>
+
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center rounded bg-dark" style="border: 1px solid rgba(255,255,255,0.1);">
+              <button class="btn text-white px-3" onclick="adjustCount(-1)">-</button>
+              <span id="counterVal" class="px-2 fw-bold">1</span>
+              <button class="btn text-white px-3" onclick="adjustCount(1)">+</button>
+            </div>
+            <button class="btn btn-outline-light px-4" onclick="triggerCartAnim()">Add to Card</button>
+            <button class="btn btn-valkyrie px-4">Buy Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-5 border-top border-secondary pt-4">
+        <ul class="nav nav-tabs border-0 gap-4 mb-3">
+          <li class="nav-item"><a class="nav-link active p-0 bg-transparent text-white border-0 border-bottom border-2 border-purple" href="#" style="border-color: var(--accent-purple) !important;">Description</a></li>
+          <li class="nav-item"><a class="nav-link p-0 bg-transparent text-secondary border-0" href="#">Specification</a></li>
+          <li class="nav-item"><a class="nav-link p-0 bg-transparent text-secondary border-0" href="#">Reviews (230)</a></li>
+          <li class="nav-item"><a class="nav-link p-0 bg-transparent text-secondary border-0" href="#">Q&A</a></li>
+        </ul>
+        <p class="text-secondary" style="font-size: 0.95rem; line-height: 1.6;">
+          Keyboard mechanical dengan Razer Green Switch tactile dan clicky, RGB Chroma, dan desain premium untuk performa maksimal.<br>
+          • Durable Green Switch<br>
+          • RGB Backlit<br>
+          • Full-size Layout<br>
+          • Ergonomic Wrist Rest
+        </p>
+      </div>
+    </section>
+
+    <section id="page-compare" class="page-section d-none">
+      <h3 class="fw-bold mb-1">Compare Products</h3>
+      <p class="text-secondary mb-4">Side-by-side technical specs</p>
+
+      <div class="table-responsive">
+        <table class="table table-dark comparison-table text-center">
+          <thead>
+            <tr>
+              <th scope="col" style="width: 25%;" class="text-start">Features</th>
+              <th scope="col" style="width: 25%;">
+                <img src="./keyboard.jpg" class="mb-2" style="height: 80px; object-fit: contain;"><br>
+                <div class="small fw-bold text-white">Razer BlackWidow V3</div>
+              </th>
+              <th scope="col" style="width: 25%;">
+                <img src="item Logitech.png" class="mb-2" style="height: 80px; object-fit: contain;"><br>
+                <div class="small fw-bold text-white">Logitech G Pro X</div>
+              </th>
+              <th scope="col" style="width: 25%;">
+                <img src="./keyboard2.jpg" class="mb-2" style="height: 80px; object-fit: contain;"><br>
+                <div class="small fw-bold text-white">HyperX Alloy Origins</div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="text-start text-secondary fw-bold">Price</td><td class="text-white fw-bold">Rp1.299.000</td><td class="text-white fw-bold">Rp 1.890.000</td><td class="text-white fw-bold">3.499.000</td></tr>
+            <tr><td class="text-start text-secondary fw-bold">Switch</td><td>Razer Green</td><td>GX Blue</td><td>HyperX Red</td></tr>
+            <tr><td class="text-start text-secondary fw-bold">RGB</td><td class="text-success"><i class="bi bi-check-lg fs-5"></i></td><td class="text-success"><i class="bi bi-check-lg fs-5"></i></td><td class="text-success"><i class="bi bi-check-lg fs-5"></i></td></tr>
+            <tr><td class="text-start text-secondary fw-bold">Wrist Rest</td><td class="text-success"><i class="bi bi-check-lg fs-5"></i></td><td class="text-success"><i class="bi bi-check-lg fs-5"></i></td><td class="text-danger"><i class="bi bi-x-lg fs-5"></i></td></tr>
+            <tr><td class="text-start text-secondary fw-bold">Connectivity</td><td>Wired</td><td>Wired</td><td>Wired</td></tr>
+            <tr><td class="text-start text-secondary fw-bold">Weight</td><td>1211 g</td><td>1010 g</td><td>1075 g</td></tr>
+            <tr><td class="text-start text-secondary fw-bold">Rating</td><td class="text-warning"><i class="bi bi-star-fill me-1"></i>4.8</td><td class="text-warning"><i class="bi bi-star-fill me-1"></i>4.9</td><td class="text-warning"><i class="bi bi-star-fill me-1"></i>4.6</td></tr>
+            <tr><td></td><td><button class="btn btn-valkyrie btn-sm w-100" onclick="triggerCartAnim()">Add to Cart</button></td><td><button class="btn btn-valkyrie btn-sm w-100" onclick="triggerCartAnim()">Add to Cart</button></td><td><button class="btn btn-valkyrie btn-sm w-100" onclick="triggerCartAnim()">Add to Cart</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // 1. SISTEM NAVIGASI SPA DENGAN FADE ANIMASI
+    function switchPage(pageId) {
+      const sections = document.querySelectorAll('.page-section');
+      const links = document.querySelectorAll('.nav-link-custom');
+
+      sections.forEach(sec => {
+        sec.classList.remove('visible');
+        sec.classList.add('d-none');
+      });
+      links.forEach(l => l.classList.remove('active'));
+
+      const target = document.getElementById('page-' + pageId);
+      if (target) {
+        target.classList.remove('d-none');
+        target.style.display = '';
+        target.classList.add('visible');
+        setTimeout(() => { target.classList.add('visible'); }, 40);
+      }
+
+      const activeLink = document.getElementById('link-' + pageId);
+      if(activeLink) activeLink.classList.add('active');
+    }
+
+    // Pindah instan ke halaman Detail sewaktu produk diklik
+    function viewProductDetail() {
+      const sections = document.querySelectorAll('.page-section');
+      sections.forEach(sec => {
+        sec.classList.remove('visible');
+        sec.classList.add('d-none');
+      });
+      const detail = document.getElementById('page-detail');
+      detail.classList.remove('d-none');
+      setTimeout(() => { detail.classList.add('visible'); }, 40);
+    }
+
+    // 2. INTERAKSI DETAIL PRODUK (Gambar & Tipe Switch)
+    function changeDetailImage(src) {
+      const img = document.getElementById('detailMainImg');
+      img.style.opacity = '0';
+      img.style.transition = 'opacity 0.2s ease';
+      setTimeout(() => {
+        img.src = src;
+        img.style.opacity = '1';
+      }, 200);
+    }
+
+    function toggleSwitch(elem) {
+      const options = document.querySelectorAll('.switch-option');
+      options.forEach(opt => opt.classList.remove('active'));
+      elem.classList.add('active');
+    }
+
+    function adjustCount(val) {
+      const node = document.getElementById('counterVal');
+      let current = parseInt(node.innerText);
+      current += val;
+      if (current < 1) current = 1;
+      node.innerText = current;
+    }
+
+    // 3. ANIMASI CART PADA HEADER (Getar/Scale)
+    function triggerCartAnim() {
+      const icon = document.querySelector('.bi-cart3');
+      icon.style.transition = 'transform 0.15s ease-in-out';
+      icon.style.transform = 'scale(1.5) rotate(-15deg)';
+      
+      setTimeout(() => {
+        icon.style.transform = 'scale(1) rotate(0deg)';
+        alert("Item added to cart successfully!");
+      }, 200);
+    }
+
+    const priceRange = document.getElementById('priceRange');
+    const priceRangeValue = document.getElementById('priceRangeValue');
+    
+    function updatePriceRange() {
+      const val = Number(priceRange.value);
+      const amount = Math.round(10000000 * val / 100);
+      priceRangeValue.textContent = `Max price: Rp ${amount.toLocaleString('id-ID')}`;
+      priceRange.style.background = `linear-gradient(90deg, var(--accent-purple) ${val}%, rgba(255,255,255,0.12) ${val}%)`;
+    }
+
+    priceRange.addEventListener('input', updatePriceRange);
+    updatePriceRange();
+  </script>
+</body>
+>>>>>>> 3fbebf3ee97fa65490598e30e55b566250052c3b
 </html>

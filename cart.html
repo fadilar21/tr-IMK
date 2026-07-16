@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valkyrie — My Cart</title>
+
+<!-- Bootstrap 5 & FontAwesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght=600;700&family=Chakra+Petch:wght=400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg:            #0d0d18;
+    --card:          #15141f;
+    --line:          #26243a;
+    --text:          #eceaf7;
+    --muted:         #8a87a3;
+    --purple:        #8b3bf0;
+    --purple-2:      #5b2a9e;
+    --cyan:          #46e0ff;
+    --pink:          #ff3d6b;
+    --green:         #2ec376;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { 
+    height: 100%; 
+    margin: 0; 
+    padding: 0;
+    overflow: hidden; /* Mengunci halaman agar tidak bisa di-scroll ke bawah */
+  }
+  
+  body {
+    background: radial-gradient(1400px 800px at 15% -10%, #171226 0%, var(--bg) 55%) fixed;
+    color: var(--text);
+    font-family: "Chakra Petch", sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  h4, .brand-name, .cart-title, .product-price, .summary-label, .summary-value {
+    font-family: "Rajdhani", sans-serif;
+  }
+
+  /* ============ MAIN PANEL (FULL SCREEN) ============ */
+  .app-shell {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    padding: 24px 32px;
+  }
+
+  /* TOPBAR DENGAN LOGO VALKYRIE */
+  .topbar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(38, 36, 58, 0.4);
+    padding-bottom: 14px;
+    flex-shrink: 0;
+  }
+  
+  .brand-top {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* Mengganti gaya SVG lama menjadi img */
+  .brand-logo { 
+    width: 32px; 
+    height: 32px; 
+    object-fit: contain;
+  }
+
+  .brand-name {
+    font-weight: 700; 
+    font-size: 1.25rem; 
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #fff, var(--cyan));
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent;
+  }
+
+  .topbar-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .topbar-actions .icon-btn {
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--muted);
+    background: rgba(255,255,255,.03);
+    border: 1px solid var(--line);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+  }
+  .topbar-actions .icon-btn:hover {
+    color: #fff;
+    border-color: var(--purple);
+  }
+
+  .cart-title {
+    font-size: 1.5rem; 
+    font-weight: 700; 
+    margin-bottom: 16px;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  /* ============ LIST PRODUK (SCROLLABLE ONLY HERE) ============ */
+  .cart-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+    padding-right: 6px;
+    margin-bottom: 20px;
+  }
+
+  /* Custom scrollbar tipis */
+  .cart-container::-webkit-scrollbar {
+    width: 6px;
+  }
+  .cart-container::-webkit-scrollbar-thumb {
+    background: var(--line);
+    border-radius: 4px;
+  }
+
+  /* PRODUCT CARD */
+  .cart-item {
+    background: linear-gradient(90deg, var(--card) 0%, #100f1a 100%);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .cart-item:hover {
+    border-color: rgba(139, 59, 240, 0.4);
+  }
+
+  .product-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1;
+  }
+  .product-img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain; /* Menjaga agar gambar produk tidak terdistorsi */
+    background: rgba(255,255,255,0.02);
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 4px;
+  }
+  .product-details {
+    display: flex;
+    flex-direction: column;
+  }
+  .brand-lbl {
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+  .product-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+  }
+
+  /* QUANTITY CONTROLLER */
+  .qty-control {
+    display: flex;
+    align-items: center;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+  }
+  .qty-btn {
+    background: transparent;
+    border: none;
+    color: var(--muted);
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: color 0.15s;
+  }
+  .qty-btn:hover {
+    color: #fff;
+  }
+  .qty-val {
+    width: 30px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #fff;
+  }
+
+  .product-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .product-price {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #fff;
+    min-width: 110px;
+    text-align: right;
+  }
+  .discount-badge {
+    background: rgba(255, 61, 107, 0.15);
+    color: var(--pink);
+    border: 1px solid rgba(255, 61, 107, 0.3);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  /* ============ FOOTER SECTION ============ */
+  .cart-footer {
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+    display: flex;
+    gap: 32px;
+    flex-shrink: 0;
+  }
+
+  /* VOUCHER */
+  .voucher-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .voucher-title {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  .voucher-input-group {
+    display: flex;
+    gap: 8px;
+  }
+  .voucher-input {
+    flex: 1;
+    background: rgba(0,0,0,0.3);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #fff;
+    font-size: 0.85rem;
+  }
+  .voucher-input:focus {
+    border-color: var(--purple);
+    outline: none;
+  }
+  .btn-apply {
+    background: rgba(139, 59, 240, 0.15);
+    border: 1px solid var(--purple);
+    color: var(--purple);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .btn-apply:hover {
+    background: var(--purple);
+    color: #fff;
+  }
+
+  /* SUMMARY BILLING */
+  .summary-panel {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+  }
+  .summary-label {
+    color: var(--muted);
+  }
+  .summary-value {
+    color: #fff;
+    font-weight: 600;
+  }
+  .summary-value.discount {
+    color: var(--green);
+  }
+  
+  .total-row {
+    border-top: 1px dashed var(--line);
+    margin-top: 4px;
+    padding-top: 8px;
+  }
+  .total-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .total-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--cyan);
+  }
+
+  .btn-checkout {
+    background: linear-gradient(90deg, var(--purple) 0%, var(--purple-2) 100%);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 10px;
+    width: 100%;
+    margin-top: 8px;
+    box-shadow: 0 4px 14px rgba(139,59,240,.2);
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  .btn-checkout:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(139,59,240,.4);
+  }
+</style>
+</head>
+<body>
+
+<div class="app-shell">
+  
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="brand-top">
+      <!-- Mengganti elemen SVG lama dengan logo.png di pojok kiri atas -->
+      <img class="brand-logo" src="logo.png" alt="Valkyrie Logo">
+      <span class="brand-name">VALKYRIE</span>
+    </div>
+    
+    <div class="topbar-actions">
+      <div class="icon-btn"><i class="fa-solid fa-magnifying-glass"></i></div>
+      <div class="icon-btn"><i class="fa-solid fa-cart-shopping"></i></div>
+      <div class="icon-btn"><i class="fa-solid fa-xmark"></i></div>
+    </div>
+  </div>
+
+  <!-- CART TITLE -->
+  <div class="cart-title" id="cart-title">My Cart (3)</div>
+
+  <!-- CART CONTAINER -->
+  <div class="cart-container">
+
+    <!-- Item 1: Keyboard -->
+    <div class="cart-item" data-base-price="1299000" data-discount="27">
+      <div class="product-info">
+        <!-- Ikon diganti menggunakan file gambar keyboard.png -->
+        <img src="keyboard.jpg" alt="Razer Blackwidow V3" class="product-img">
+        <div class="product-details">
+          <span class="brand-lbl">Razer</span>
+          <h4 class="product-name">Razer Blackwidow V3</h4>
+        </div>
+      </div>
+      
+      <div class="product-meta">
+        <div class="qty-control">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <span class="qty-val">1</span>
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+        <span class="product-price">Rp1.299.000</span>
+        <span class="discount-badge">27%</span>
+      </div>
+    </div>
+
+    <!-- Item 2: Headset -->
+    <div class="cart-item" data-base-price="1890000" data-discount="0">
+      <div class="product-info">
+    
+        <img src="headset.jpeg" alt="Logitech G Pro X" class="product-img">
+        <div class="product-details">
+          <span class="brand-lbl">Logitech</span>
+          <h4 class="product-name">Logitech G Pro X Superlight</h4>
+        </div>
+      </div>
+      
+      <div class="product-meta">
+        <div class="qty-control">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <span class="qty-val">1</span>
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+        <span class="product-price">Rp1.890.000</span>
+      </div>
+    </div>
+
+    <!-- Item 3: Razer Kraken -->
+    <div class="cart-item" data-base-price="3499000" data-discount="17">
+      <div class="product-info">
+        <!-- Ikon diganti menggunakan file gambar headset.png -->
+        <img src="hd.jpeg" alt="Razer Kraken V4 Pro" class="product-img">
+        <div class="product-details">
+          <span class="brand-lbl">Razer</span>
+          <h4 class="product-name">Razer Kraken V4 Pro</h4>
+        </div>
+      </div>
+      
+      <div class="product-meta">
+        <div class="qty-control">
+          <button class="qty-btn" onclick="updateQty(this, -1)">−</button>
+          <span class="qty-val">1</span>
+          <button class="qty-btn" onclick="updateQty(this, 1)">+</button>
+        </div>
+        <span class="product-price">Rp3.499.000</span>
+        <span class="discount-badge">17%</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="cart-footer">
+    <div class="voucher-panel">
+      <span class="voucher-title">Voucher</span>
+      <div class="voucher-input-group">
+        <input type="text" class="voucher-input" id="voucher-code" placeholder="Voucher Code">
+        <button class="btn-apply" onclick="applyVoucher()">Apply</button>
+      </div>
+    </div>
+
+    <div class="summary-panel">
+      <div class="summary-row">
+        <span class="summary-label">Subtotal</span>
+        <span class="summary-value" id="subtotal-val">Rp6.688.000</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-label">Discount</span>
+        <span class="summary-value discount" id="discount-val">-Rp985.460</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-label">Shipping</span>
+        <span class="summary-value" id="shipping-val">Rp0</span>
+      </div>
+      <div class="summary-row total-row">
+        <span class="summary-label total-label">Total</span>
+        <span class="summary-value total-value" id="total-val">Rp5.702.540</span>
+      </div>
+
+      <button class="btn-checkout" onclick="checkout()">Checkout Order</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Penyimpanan diskon voucher tambahan (misal: VALKYRIE20 untuk potongan tambahan Rp100.000)
+  let extraVoucherDiscount = 0;
+
+  // Format angka ke mata uang Rupiah
+  function formatRupiah(number) {
+    return 'Rp' + number.toLocaleString('id-ID');
+  }
+
+  // Fungsi kalkulasi kalkulator belanja
+  function calculateCart() {
+    const cartItems = document.querySelectorAll('.cart-item');
+    let subtotal = 0;
+    let totalDiscount = 0;
+    let totalItemsCount = 0;
+
+    cartItems.forEach(item => {
+      const basePrice = parseInt(item.getAttribute('data-base-price'));
+      const discountPercent = parseInt(item.getAttribute('data-discount') || 0);
+      const qty = parseInt(item.querySelector('.qty-val').innerText);
+
+      totalItemsCount += qty;
+
+      // Kalkulasi harga total barang ini sebelum diskon bawaan
+      const itemSubtotal = basePrice * qty;
+      subtotal += itemSubtotal;
+
+      // Kalkulasi nominal potongan diskon bawaan item
+      const itemDiscount = Math.round((basePrice * (discountPercent / 100)) * qty);
+      totalDiscount += itemDiscount;
+
+      // Tampilkan harga subtotal ter-update per baris item
+      const priceText = item.querySelector('.product-price');
+      priceText.innerText = formatRupiah(itemSubtotal);
+    });
+
+    // Tambahkan potongan voucher jika ada
+    totalDiscount += extraVoucherDiscount;
+
+    // Hitung total akhir
+    const shipping = 0; // Free shipping
+    const grandTotal = Math.max(0, subtotal - totalDiscount + shipping);
+
+    // Update tampilan DOM di panel summary billing
+    document.getElementById('cart-title').innerText = `My Cart (${totalItemsCount})`;
+    document.getElementById('subtotal-val').innerText = formatRupiah(subtotal);
+    document.getElementById('discount-val').innerText = totalDiscount > 0 ? `-${formatRupiah(totalDiscount)}` : 'Rp0';
+    document.getElementById('shipping-val').innerText = formatRupiah(shipping);
+    document.getElementById('total-val').innerText = formatRupiah(grandTotal);
+  }
+
+  // Fungsi pengubah kuantiti
+  function updateQty(btn, change) {
+    const qtySpan = btn.parentElement.querySelector('.qty-val');
+    let currentQty = parseInt(qtySpan.innerText);
+    currentQty += change;
+    
+    if (currentQty < 1) currentQty = 1; // Batas minimum kuantiti adalah 1
+    
+    qtySpan.innerText = currentQty;
+    calculateCart();
+  }
+
+  // Fungsi apply voucher tambahan
+  function applyVoucher() {
+    const codeInput = document.getElementById('voucher-code');
+    const code = codeInput.value.trim().toUpperCase();
+
+    if (code === 'VALKYRIE20') {
+      extraVoucherDiscount = 100000; // Potongan langsung Rp100.000
+      alert('Voucher "VALKYRIE20" berhasil dipasang! Potongan tambahan Rp100.000.');
+    } else if (code === '') {
+      extraVoucherDiscount = 0;
+    } else {
+      extraVoucherDiscount = 0;
+      alert('Voucher tidak valid atau kadaluarsa.');
+    }
+    calculateCart();
+  }
+
+  // Fungsi tombol checkout
+  function checkout() {
+    const totalAmount = document.getElementById('total-val').innerText;
+    alert(`Pesanan Anda berhasil dikonfirmasi!\nTotal Pembayaran: ${totalAmount}\n\nTerima kasih telah berbelanja di Valkyrie.`);
+  }
+
+  // Jalankan kalkulasi perdana saat load halaman
+  window.onload = calculateCart;
+</script>
+
+</body>
+</html>
