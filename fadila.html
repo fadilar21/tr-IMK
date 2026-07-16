@@ -41,22 +41,11 @@
 
     /* Sidebar Layout */
     .sidebar {
-      background-color: var(--bg-sidebar);
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 260px;
-      z-index: 100;
-      border-right: 1px solid rgba(255, 255, 255, 0.05);
-      padding: 1.5rem;
+      display: none;
     }
 
     .brand-area {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 2.5rem;
+      display: none;
     }
 
     .brand-logo-img {
@@ -102,7 +91,7 @@
 
     /* Main Content Layout */
     .main-content {
-      margin-left: 260px;
+      margin-left: 0;
       padding: 2rem;
       min-height: 100vh;
       position: relative;
@@ -440,6 +429,7 @@
 </head>
 <body>
 
+  <!-- Sidebar navigation (hidden by CSS) -->
   <aside class="sidebar">
     <div class="brand-area">
       <span class="brand-name">VALKYRIE</span>
@@ -464,6 +454,7 @@
     </nav>
   </aside>
 
+  <!-- Main page content -->
   <main class="main-content">
     
     <header class="top-header">
@@ -585,7 +576,7 @@
         </div>
       </div>
     </section>
-
+ 
     <section id="page-search" class="page-section d-none">
       <div class="row g-4">
         <div class="col-lg-3">
@@ -715,6 +706,7 @@
       </div>
     </section>
 
+    <!-- page detail -->
     <section id="page-detail" class="page-section d-none">
       <div class="text-secondary small mb-3">Home / Keyboard / Razer BlackWidow V3</div>
       
