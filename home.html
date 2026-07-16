@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Daftar — Valkyrie</title>
+<title>Valkyrie — Home</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* =========================================================
    VALKYRIE — Gaming Gear UI
@@ -32,8 +32,8 @@
   --radius-lg: 22px;
   --radius-md: 14px;
   --radius-sm: 8px;
-  --font-display: 'Orbitron', sans-serif;
-  --font-body: 'Rajdhani', sans-serif;
+  --font-display: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
 }
 
 *{ box-sizing: border-box; }
@@ -266,6 +266,9 @@ a{ text-decoration: none; }
   background: rgba(255,255,255,0.1);
 }
 
+/* ---------------------------------------------------------
+   SPLASH PAGE
+   --------------------------------------------------------- */
 .splash-wrap{
   min-height: 100vh;
   display: flex;
@@ -297,6 +300,9 @@ a{ text-decoration: none; }
 
 .splash-wrap .btn-vk{ width: auto; padding: .9rem 2.4rem; }
 
+/* ---------------------------------------------------------
+   AUTH (login / register) layout
+   --------------------------------------------------------- */
 .auth-wrap{
   min-height: 100vh;
   display: flex;
@@ -322,6 +328,9 @@ a{ text-decoration: none; }
   margin-bottom: 1.6rem;
 }
 
+/* ---------------------------------------------------------
+   HOME PAGE / NAVBAR
+   --------------------------------------------------------- */
 .vk-navbar{
   background: rgba(10, 6, 20, 0.75);
   backdrop-filter: blur(14px);
@@ -449,6 +458,7 @@ a{ text-decoration: none; }
 }
 .hero-banner .btn-vk{ width: auto; padding: .75rem 1.8rem; margin-top: 1rem; }
 
+/* Category pills */
 .cat-pill{
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(168,85,247,0.2);
@@ -469,6 +479,7 @@ a{ text-decoration: none; }
   box-shadow: var(--glow-purple);
 }
 
+/* Product cards */
 .product-card{
   background: rgba(255,255,255,0.035);
   border: 1px solid rgba(168,85,247,0.18);
@@ -509,6 +520,7 @@ a{ text-decoration: none; }
   margin-left: .4rem;
 }
 
+/* scroll reveal */
 .reveal{
   opacity: 0;
   transform: translateY(30px);
@@ -519,6 +531,7 @@ a{ text-decoration: none; }
   transform: translateY(0);
 }
 
+/* Scrollbar */
 ::-webkit-scrollbar{ width: 8px; }
 ::-webkit-scrollbar-track{ background: var(--bg-void); }
 ::-webkit-scrollbar-thumb{ background: var(--purple-500); border-radius: 8px; }
@@ -531,109 +544,155 @@ a{ text-decoration: none; }
 </head>
 <body>
 
-<div class="bg-scene"></div>
+<div class="bg-scene" style="opacity:.5;"></div>
 <div class="bg-glow"></div>
 
-<main class="auth-wrap">
-  <div class="auth-card register fade-up">
+<!-- NAVBAR -->
+<nav class="vk-navbar py-2">
+  <div class="container-fluid px-3 px-md-4">
+    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
 
-    <div class="brand">
-      <img src="assets/logo.png" alt="Valkyrie logo" style="height:56px;">
-    </div>
-    <div class="brand-name" style="text-align:center; margin-top:.4rem;">VALKYRIE</div>
+      <div class="brand" style="justify-content:flex-start;">
+        <img src="assets/logo.png" alt="Valkyrie" style="height:34px;">
+        <span class="brand-name" style="font-size:1.1rem; letter-spacing:2px;">VALKYRIE</span>
+      </div>
 
-    <div class="glass-card mt-4 fade-up delay-1">
-      <h2 class="auth-title">Create Account</h2>
-      <p class="auth-sub">Gabung dan mulai upgrade setup gaming-mu</p>
-
-      <form id="registerForm" novalidate>
-        <div class="mb-3">
-          <label class="form-label-vk" for="regName">Nama Lengkap</label>
-          <input type="text" class="input-vk" id="regName" placeholder="Nama kamu" required>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label-vk" for="regEmail">Email</label>
-          <input type="email" class="input-vk" id="regEmail" placeholder="you@email.com" required>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label-vk" for="regUsername">Username</label>
-          <input type="text" class="input-vk" id="regUsername" placeholder="gamertag_kamu" required>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label-vk" for="regPass">Password</label>
-          <div class="input-group-vk">
-            <input type="password" class="input-vk" id="regPass" placeholder="Minimal 8 karakter" minlength="8" required>
-            <span class="toggle-eye" data-target="regPass"><i class="fa-regular fa-eye"></i></span>
-          </div>
-        </div>
-
-        <div class="mb-3">
-          <label class="form-label-vk" for="regPass2">Konfirmasi Password</label>
-          <div class="input-group-vk">
-            <input type="password" class="input-vk" id="regPass2" placeholder="Ulangi password" required>
-            <span class="toggle-eye" data-target="regPass2"><i class="fa-regular fa-eye"></i></span>
-          </div>
-          <small id="matchMsg" style="display:none; color:var(--pink-400); font-size:.78rem;">Password tidak sama</small>
-        </div>
-
-        <label class="d-flex align-items-start gap-2 mb-3" style="color:var(--text-mid); font-size:.85rem; cursor:pointer;">
-          <input type="checkbox" required style="accent-color:var(--purple-500); margin-top:.25rem;">
-          Saya setuju dengan <a href="#" class="link-vk">Syarat & Ketentuan</a>
-        </label>
-
-        <button type="submit" class="btn-vk">
-          Create Account <i class="fa-solid fa-arrow-right arrow"></i>
-        </button>
+      <form class="d-none d-md-flex flex-grow-1 mx-4" style="max-width:420px;" onsubmit="return false;">
+        <input type="text" class="search-vk w-100" placeholder="Cari gaming gear...">
       </form>
 
-      <p class="text-center mt-4" style="color:var(--text-low); font-size:.9rem;">
-        Sudah punya akun? <a href="login.html" class="link-vk">Login di sini</a>
-      </p>
+      <div class="d-flex align-items-center gap-2">
+        <button class="icon-btn-vk" title="Wishlist"><i class="fa-regular fa-heart"></i><span class="badge-vk">3</span></button>
+        <button class="icon-btn-vk" title="Keranjang"><i class="fa-solid fa-cart-shopping"></i><span class="badge-vk">2</span></button>
+        <button class="icon-btn-vk d-md-none" id="menuToggle" title="Menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
     </div>
+  </div>
+</nav>
+
+<main class="container-fluid px-3 px-md-4 py-4">
+  <div class="row g-4">
+
+    <!-- SIDEBAR -->
+    <aside class="col-md-3 col-lg-2" id="sidebarCol">
+      <div class="vk-sidebar">
+        <a href="home.html" class="side-link active"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="#" class="side-link"><i class="fa-solid fa-gamepad"></i> Products</a>
+        <a href="#" class="side-link"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+        <a href="#" class="side-link"><i class="fa-regular fa-heart"></i> Wishlist</a>
+        <a href="#" class="side-link"><i class="fa-solid fa-truck-fast"></i> Track Order</a>
+        <a href="#" class="side-link"><i class="fa-solid fa-headset"></i> Support</a>
+        <a href="#" class="side-link"><i class="fa-solid fa-gear"></i> Setting</a>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <section class="col-md-9 col-lg-10">
+
+      <!-- HERO -->
+      <div class="hero-banner reveal">
+        <div style="position:relative; z-index:1;" class="fade-up">
+          <div class="hero-eyebrow">Flash Sale</div>
+          <h1 class="hero-title">LEVEL UP<br>YOUR GAME <span class="accent">UP TO 50% OFF</span></h1>
+          <p style="color:var(--text-mid); max-width:420px;">Upgrade rig-mu dengan gear pilihan untuk performa maksimal di setiap match.</p>
+          <a href="#products" class="btn-vk">Shop Now <i class="fa-solid fa-arrow-right arrow"></i></a>
+        </div>
+      </div>
+
+      <!-- CATEGORIES -->
+      <div class="row g-3 mt-1 reveal">
+        <div class="col-4 col-md-2"><a href="#" class="cat-pill"><i class="fa-solid fa-keyboard"></i>Keyboard</a></div>
+        <div class="col-4 col-md-2"><a href="#" class="cat-pill"><i class="fa-solid fa-computer-mouse"></i>Mouse</a></div>
+        <div class="col-4 col-md-2"><a href="#" class="cat-pill"><i class="fa-solid fa-headphones"></i>Headset</a></div>
+        <div class="col-4 col-md-2"><a href="#" class="cat-pill"><i class="fa-solid fa-display"></i>Monitor</a></div>
+        <div class="col-4 col-md-2"><a href="#" class="cat-pill"><i class="fa-solid fa-chair"></i>Kursi</a></div>
+        <div class="col-4 col-md-2"><a href="#" class="cat-pill"><i class="fa-solid fa-microphone"></i>Mic</a></div>
+      </div>
+
+      <!-- PRODUCTS -->
+      <div id="products" class="d-flex align-items-center justify-content-between mt-5 mb-3 reveal">
+        <h3 style="font-family:var(--font-display); font-size:1.15rem; letter-spacing:.04em;">Trending Gear</h3>
+        <a href="#" class="link-vk" style="font-size:.9rem;">Lihat semua <i class="fa-solid fa-chevron-right" style="font-size:.7rem;"></i></a>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-6 col-md-4 col-lg-3 reveal">
+          <div class="product-card">
+            <div class="product-thumb" style="background:linear-gradient(135deg,#1c1030,#2a1440);">
+              <span class="discount-tag">-30%</span>
+              <i class="fa-solid fa-keyboard" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:2.6rem; color:var(--purple-400);"></i>
+            </div>
+            <div class="product-body">
+              <div class="product-name">Mechanical Keyboard RGB Pro</div>
+              <div class="product-price">Rp699.000 <span class="old">Rp999.000</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 reveal">
+          <div class="product-card">
+            <div class="product-thumb" style="background:linear-gradient(135deg,#241033,#3a1450);">
+              <span class="discount-tag">-20%</span>
+              <i class="fa-solid fa-computer-mouse" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:2.6rem; color:var(--pink-400);"></i>
+            </div>
+            <div class="product-body">
+              <div class="product-name">Wireless Gaming Mouse X2</div>
+              <div class="product-price">Rp399.000 <span class="old">Rp499.000</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 reveal">
+          <div class="product-card">
+            <div class="product-thumb" style="background:linear-gradient(135deg,#1a1230,#2c1a48);">
+              <span class="discount-tag">-15%</span>
+              <i class="fa-solid fa-headphones" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:2.6rem; color:var(--purple-400);"></i>
+            </div>
+            <div class="product-body">
+              <div class="product-name">Surround Headset Elite</div>
+              <div class="product-price">Rp850.000 <span class="old">Rp999.000</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-3 reveal">
+          <div class="product-card">
+            <div class="product-thumb" style="background:linear-gradient(135deg,#20122f,#33144c);">
+              <span class="discount-tag">-25%</span>
+              <i class="fa-solid fa-display" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:2.6rem; color:var(--pink-400);"></i>
+            </div>
+            <div class="product-body">
+              <div class="product-name">Curved Monitor 144Hz</div>
+              <div class="product-price">Rp2.250.000 <span class="old">Rp2.999.000</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
   </div>
 </main>
 
 <script>
-  document.querySelectorAll('.toggle-eye').forEach(function (el) {
-    el.addEventListener('click', function () {
-      const input = document.getElementById(this.dataset.target);
-      const icon = this.querySelector('i');
-      const isPass = input.type === 'password';
-      input.type = isPass ? 'text' : 'password';
-      icon.classList.toggle('fa-eye');
-      icon.classList.toggle('fa-eye-slash');
+  // Toggle sidebar di mobile
+  const menuToggle = document.getElementById('menuToggle');
+  const sidebarCol = document.getElementById('sidebarCol');
+  menuToggle.addEventListener('click', function () {
+    sidebarCol.querySelector('.vk-sidebar').style.display =
+      sidebarCol.querySelector('.vk-sidebar').style.display === 'block' ? 'none' : 'block';
+  });
+
+  // Scroll reveal animation
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
     });
-  });
-
-  const form = document.getElementById('registerForm');
-  const pass1 = document.getElementById('regPass');
-  const pass2 = document.getElementById('regPass2');
-  const matchMsg = document.getElementById('matchMsg');
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    const passwordsMatch = pass1.value === pass2.value && pass1.value.length > 0;
-    matchMsg.style.display = passwordsMatch ? 'none' : 'block';
-
-    if (!form.checkValidity() || !passwordsMatch) {
-      form.classList.add('was-validated');
-      return;
-    }
-
-    const btn = form.querySelector('.btn-vk');
-    const originalHTML = btn.innerHTML;
-    btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Membuat akun...';
-    btn.style.pointerEvents = 'none';
-    setTimeout(() => {
-      btn.innerHTML = originalHTML;
-      btn.style.pointerEvents = 'auto';
-      window.location.href = 'login.html';
-    }, 1100);
-  });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => observer.observe(el));
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
