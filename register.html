@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login — Valkyrie</title>
+<title>Daftar — Valkyrie</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 /* =========================================================
    VALKYRIE — Gaming Gear UI
@@ -32,8 +32,8 @@
   --radius-lg: 22px;
   --radius-md: 14px;
   --radius-sm: 8px;
-  --font-display: 'Inter', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-display: 'Orbitron', sans-serif;
+  --font-body: 'Rajdhani', sans-serif;
 }
 
 *{ box-sizing: border-box; }
@@ -266,9 +266,6 @@ a{ text-decoration: none; }
   background: rgba(255,255,255,0.1);
 }
 
-/* ---------------------------------------------------------
-   SPLASH PAGE
-   --------------------------------------------------------- */
 .splash-wrap{
   min-height: 100vh;
   display: flex;
@@ -300,9 +297,6 @@ a{ text-decoration: none; }
 
 .splash-wrap .btn-vk{ width: auto; padding: .9rem 2.4rem; }
 
-/* ---------------------------------------------------------
-   AUTH (login / register) layout
-   --------------------------------------------------------- */
 .auth-wrap{
   min-height: 100vh;
   display: flex;
@@ -328,9 +322,6 @@ a{ text-decoration: none; }
   margin-bottom: 1.6rem;
 }
 
-/* ---------------------------------------------------------
-   HOME PAGE / NAVBAR
-   --------------------------------------------------------- */
 .vk-navbar{
   background: rgba(10, 6, 20, 0.75);
   backdrop-filter: blur(14px);
@@ -458,7 +449,6 @@ a{ text-decoration: none; }
 }
 .hero-banner .btn-vk{ width: auto; padding: .75rem 1.8rem; margin-top: 1rem; }
 
-/* Category pills */
 .cat-pill{
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(168,85,247,0.2);
@@ -479,7 +469,6 @@ a{ text-decoration: none; }
   box-shadow: var(--glow-purple);
 }
 
-/* Product cards */
 .product-card{
   background: rgba(255,255,255,0.035);
   border: 1px solid rgba(168,85,247,0.18);
@@ -520,7 +509,6 @@ a{ text-decoration: none; }
   margin-left: .4rem;
 }
 
-/* scroll reveal */
 .reveal{
   opacity: 0;
   transform: translateY(30px);
@@ -531,7 +519,6 @@ a{ text-decoration: none; }
   transform: translateY(0);
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar{ width: 8px; }
 ::-webkit-scrollbar-track{ background: var(--bg-void); }
 ::-webkit-scrollbar-thumb{ background: var(--purple-500); border-radius: 8px; }
@@ -548,7 +535,7 @@ a{ text-decoration: none; }
 <div class="bg-glow"></div>
 
 <main class="auth-wrap">
-  <div class="auth-card fade-up">
+  <div class="auth-card register fade-up">
 
     <div class="brand">
       <img src="assets/logo.png" alt="Valkyrie logo" style="height:56px;">
@@ -556,51 +543,60 @@ a{ text-decoration: none; }
     <div class="brand-name" style="text-align:center; margin-top:.4rem;">VALKYRIE</div>
 
     <div class="glass-card mt-4 fade-up delay-1">
-      <h2 class="auth-title">Welcome Back!</h2>
-      <p class="auth-sub">Masuk untuk melanjutkan berburu gear terbaikmu</p>
+      <h2 class="auth-title">Create Account</h2>
+      <p class="auth-sub">Gabung dan mulai upgrade setup gaming-mu</p>
 
-      <form id="loginForm" novalidate>
+      <form id="registerForm" novalidate>
         <div class="mb-3">
-          <label class="form-label-vk" for="loginEmail">Email atau Username</label>
-          <input type="text" class="input-vk" id="loginEmail" placeholder="you@email.com" required>
+          <label class="form-label-vk" for="regName">Nama Lengkap</label>
+          <input type="text" class="input-vk" id="regName" placeholder="Nama kamu" required>
         </div>
 
-        <div class="mb-2">
-          <label class="form-label-vk" for="loginPass">Password</label>
+        <div class="mb-3">
+          <label class="form-label-vk" for="regEmail">Email</label>
+          <input type="email" class="input-vk" id="regEmail" placeholder="you@email.com" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label-vk" for="regUsername">Username</label>
+          <input type="text" class="input-vk" id="regUsername" placeholder="gamertag_kamu" required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label-vk" for="regPass">Password</label>
           <div class="input-group-vk">
-            <input type="password" class="input-vk" id="loginPass" placeholder="••••••••" required>
-            <span class="toggle-eye" data-target="loginPass"><i class="fa-regular fa-eye"></i></span>
+            <input type="password" class="input-vk" id="regPass" placeholder="Minimal 8 karakter" minlength="8" required>
+            <span class="toggle-eye" data-target="regPass"><i class="fa-regular fa-eye"></i></span>
           </div>
         </div>
 
-        <div class="d-flex justify-content-between align-items-center mb-3" style="font-size:.85rem;">
-          <label class="d-flex align-items-center gap-2" style="color:var(--text-mid); cursor:pointer;">
-            <input type="checkbox" style="accent-color:var(--purple-500);"> Ingat saya
-          </label>
-          <a href="#" class="link-vk">Lupa password?</a>
+        <div class="mb-3">
+          <label class="form-label-vk" for="regPass2">Konfirmasi Password</label>
+          <div class="input-group-vk">
+            <input type="password" class="input-vk" id="regPass2" placeholder="Ulangi password" required>
+            <span class="toggle-eye" data-target="regPass2"><i class="fa-regular fa-eye"></i></span>
+          </div>
+          <small id="matchMsg" style="display:none; color:var(--pink-400); font-size:.78rem;">Password tidak sama</small>
         </div>
 
+        <label class="d-flex align-items-start gap-2 mb-3" style="color:var(--text-mid); font-size:.85rem; cursor:pointer;">
+          <input type="checkbox" required style="accent-color:var(--purple-500); margin-top:.25rem;">
+          Saya setuju dengan <a href="#" class="link-vk">Syarat & Ketentuan</a>
+        </label>
+
         <button type="submit" class="btn-vk">
-          Login <i class="fa-solid fa-arrow-right arrow"></i>
+          Create Account <i class="fa-solid fa-arrow-right arrow"></i>
         </button>
       </form>
 
-      <div class="divider-vk">atau lanjutkan dengan</div>
-
-      <div class="d-flex gap-2">
-        <button class="btn-outline-vk"><i class="fa-brands fa-google"></i> Google</button>
-        <button class="btn-outline-vk"><i class="fa-brands fa-discord"></i> Discord</button>
-      </div>
-
       <p class="text-center mt-4" style="color:var(--text-low); font-size:.9rem;">
-        Belum punya akun? <a href="register.html" class="link-vk">Daftar sekarang</a>
+        Sudah punya akun? <a href="login.html" class="link-vk">Login di sini</a>
       </p>
     </div>
   </div>
 </main>
 
 <script>
-  // Toggle show/hide password
   document.querySelectorAll('.toggle-eye').forEach(function (el) {
     el.addEventListener('click', function () {
       const input = document.getElementById(this.dataset.target);
@@ -612,23 +608,31 @@ a{ text-decoration: none; }
     });
   });
 
-  // Validasi ringan + animasi loading pada submit
-  const form = document.getElementById('loginForm');
+  const form = document.getElementById('registerForm');
+  const pass1 = document.getElementById('regPass');
+  const pass2 = document.getElementById('regPass2');
+  const matchMsg = document.getElementById('matchMsg');
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    if (!form.checkValidity()) {
+
+    const passwordsMatch = pass1.value === pass2.value && pass1.value.length > 0;
+    matchMsg.style.display = passwordsMatch ? 'none' : 'block';
+
+    if (!form.checkValidity() || !passwordsMatch) {
       form.classList.add('was-validated');
       return;
     }
+
     const btn = form.querySelector('.btn-vk');
     const originalHTML = btn.innerHTML;
-    btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Memproses...';
+    btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Membuat akun...';
     btn.style.pointerEvents = 'none';
     setTimeout(() => {
       btn.innerHTML = originalHTML;
       btn.style.pointerEvents = 'auto';
-      window.location.href = 'home.html';
-    }, 1000);
+      window.location.href = 'login.html';
+    }, 1100);
   });
 </script>
 

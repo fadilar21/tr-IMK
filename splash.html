@@ -3,17 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login — Valkyrie</title>
+<title>Valkyrie — Level Up Your Game</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-/* =========================================================
-   VALKYRIE — Gaming Gear UI
-   Design tokens
-   ========================================================= */
+
 :root{
   --bg-void: #07040f;
   --bg-panel: rgba(20, 12, 36, 0.55);
@@ -53,9 +51,6 @@ body{
 
 a{ text-decoration: none; }
 
-/* ---------------------------------------------------------
-   Reusable background layer
-   --------------------------------------------------------- */
 .bg-scene{
   position: fixed;
   inset: 0;
@@ -83,9 +78,6 @@ a{ text-decoration: none; }
     radial-gradient(500px 380px at 85% 75%, rgba(236,72,153,0.16), transparent 60%);
 }
 
-/* ---------------------------------------------------------
-   Brand / logo
-   --------------------------------------------------------- */
 .brand{
   display: flex;
   align-items: center;
@@ -115,9 +107,6 @@ a{ text-decoration: none; }
   50%      { transform: translateY(-6px); }
 }
 
-/* ---------------------------------------------------------
-   Fade / rise entrance animations
-   --------------------------------------------------------- */
 .fade-up{
   opacity: 0;
   transform: translateY(24px);
@@ -132,9 +121,6 @@ a{ text-decoration: none; }
 .delay-4{ animation-delay: .48s; }
 .delay-5{ animation-delay: .6s; }
 
-/* ---------------------------------------------------------
-   Glass card (login / register)
-   --------------------------------------------------------- */
 .glass-card{
   background: var(--bg-panel);
   border: 1px solid var(--border-soft);
@@ -187,9 +173,6 @@ a{ text-decoration: none; }
 }
 .toggle-eye:hover{ color: var(--purple-400); }
 
-/* ---------------------------------------------------------
-   Buttons
-   --------------------------------------------------------- */
 .btn-vk{
   display: inline-flex;
   align-items: center;
@@ -300,9 +283,6 @@ a{ text-decoration: none; }
 
 .splash-wrap .btn-vk{ width: auto; padding: .9rem 2.4rem; }
 
-/* ---------------------------------------------------------
-   AUTH (login / register) layout
-   --------------------------------------------------------- */
 .auth-wrap{
   min-height: 100vh;
   display: flex;
@@ -328,9 +308,6 @@ a{ text-decoration: none; }
   margin-bottom: 1.6rem;
 }
 
-/* ---------------------------------------------------------
-   HOME PAGE / NAVBAR
-   --------------------------------------------------------- */
 .vk-navbar{
   background: rgba(10, 6, 20, 0.75);
   backdrop-filter: blur(14px);
@@ -416,7 +393,6 @@ a{ text-decoration: none; }
   box-shadow: var(--glow-purple);
 }
 
-/* Hero banner */
 .hero-banner{
   border-radius: var(--radius-lg);
   background:
@@ -458,7 +434,6 @@ a{ text-decoration: none; }
 }
 .hero-banner .btn-vk{ width: auto; padding: .75rem 1.8rem; margin-top: 1rem; }
 
-/* Category pills */
 .cat-pill{
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(168,85,247,0.2);
@@ -478,8 +453,6 @@ a{ text-decoration: none; }
   color: #fff;
   box-shadow: var(--glow-purple);
 }
-
-/* Product cards */
 .product-card{
   background: rgba(255,255,255,0.035);
   border: 1px solid rgba(168,85,247,0.18);
@@ -519,8 +492,6 @@ a{ text-decoration: none; }
   font-size: .85rem;
   margin-left: .4rem;
 }
-
-/* scroll reveal */
 .reveal{
   opacity: 0;
   transform: translateY(30px);
@@ -530,8 +501,6 @@ a{ text-decoration: none; }
   opacity: 1;
   transform: translateY(0);
 }
-
-/* Scrollbar */
 ::-webkit-scrollbar{ width: 8px; }
 ::-webkit-scrollbar-track{ background: var(--bg-void); }
 ::-webkit-scrollbar-thumb{ background: var(--purple-500); border-radius: 8px; }
@@ -547,88 +516,28 @@ a{ text-decoration: none; }
 <div class="bg-scene"></div>
 <div class="bg-glow"></div>
 
-<main class="auth-wrap">
-  <div class="auth-card fade-up">
-
-    <div class="brand">
-      <img src="assets/logo.png" alt="Valkyrie logo" style="height:56px;">
-    </div>
-    <div class="brand-name" style="text-align:center; margin-top:.4rem;">VALKYRIE</div>
-
-    <div class="glass-card mt-4 fade-up delay-1">
-      <h2 class="auth-title">Welcome Back!</h2>
-      <p class="auth-sub">Masuk untuk melanjutkan berburu gear terbaikmu</p>
-
-      <form id="loginForm" novalidate>
-        <div class="mb-3">
-          <label class="form-label-vk" for="loginEmail">Email atau Username</label>
-          <input type="text" class="input-vk" id="loginEmail" placeholder="you@email.com" required>
-        </div>
-
-        <div class="mb-2">
-          <label class="form-label-vk" for="loginPass">Password</label>
-          <div class="input-group-vk">
-            <input type="password" class="input-vk" id="loginPass" placeholder="••••••••" required>
-            <span class="toggle-eye" data-target="loginPass"><i class="fa-regular fa-eye"></i></span>
-          </div>
-        </div>
-
-        <div class="d-flex justify-content-between align-items-center mb-3" style="font-size:.85rem;">
-          <label class="d-flex align-items-center gap-2" style="color:var(--text-mid); cursor:pointer;">
-            <input type="checkbox" style="accent-color:var(--purple-500);"> Ingat saya
-          </label>
-          <a href="#" class="link-vk">Lupa password?</a>
-        </div>
-
-        <button type="submit" class="btn-vk">
-          Login <i class="fa-solid fa-arrow-right arrow"></i>
-        </button>
-      </form>
-
-      <div class="divider-vk">atau lanjutkan dengan</div>
-
-      <div class="d-flex gap-2">
-        <button class="btn-outline-vk"><i class="fa-brands fa-google"></i> Google</button>
-        <button class="btn-outline-vk"><i class="fa-brands fa-discord"></i> Discord</button>
-      </div>
-
-      <p class="text-center mt-4" style="color:var(--text-low); font-size:.9rem;">
-        Belum punya akun? <a href="register.html" class="link-vk">Daftar sekarang</a>
-      </p>
-    </div>
+<main class="splash-wrap">
+  <div class="brand fade-up">
+    <img src="assets/logo.png" alt="Valkyrie logo">
   </div>
+  <div class="brand-name fade-up delay-1">VALKYRIE</div>
+
+  <h1 class="splash-tagline fade-up delay-2">LEVEL UP<br>YOUR GAME</h1>
+  <p class="splash-sub fade-up delay-3">Premium Gaming Gear<br>For True Gamers</p>
+
+  <a href="login.html" class="btn-vk fade-up delay-4" id="getStartedBtn">
+    Get Started <i class="fa-solid fa-arrow-right arrow"></i>
+  </a>
 </main>
 
 <script>
-  // Toggle show/hide password
-  document.querySelectorAll('.toggle-eye').forEach(function (el) {
-    el.addEventListener('click', function () {
-      const input = document.getElementById(this.dataset.target);
-      const icon = this.querySelector('i');
-      const isPass = input.type === 'password';
-      input.type = isPass ? 'text' : 'password';
-      icon.classList.toggle('fa-eye');
-      icon.classList.toggle('fa-eye-slash');
-    });
-  });
-
-  // Validasi ringan + animasi loading pada submit
-  const form = document.getElementById('loginForm');
-  form.addEventListener('submit', function (e) {
+  // Halus: efek klik sebelum pindah halaman (page-transition kecil)
+  const btn = document.getElementById('getStartedBtn');
+  btn.addEventListener('click', function (e) {
     e.preventDefault();
-    if (!form.checkValidity()) {
-      form.classList.add('was-validated');
-      return;
-    }
-    const btn = form.querySelector('.btn-vk');
-    const originalHTML = btn.innerHTML;
-    btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Memproses...';
-    btn.style.pointerEvents = 'none';
-    setTimeout(() => {
-      btn.innerHTML = originalHTML;
-      btn.style.pointerEvents = 'auto';
-      window.location.href = 'home.html';
-    }, 1000);
+    document.body.style.transition = 'opacity .35s ease';
+    document.body.style.opacity = '0';
+    setTimeout(() => { window.location.href = this.getAttribute('href'); }, 320);
   });
 </script>
 
