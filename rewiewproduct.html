@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valkyrie Review</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="reviewproduct.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="bg-logo"></div>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-4">
+
+            <a href="#" class="navbar-brand logo">
+                VALKYRIE
+            </a>
+
+            <div class="nav-menu ms-auto">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+
+                <img src="https://i.pravatar.cc/100" alt="" class="profile-img">
+
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+        </div>
+    </nav>
+
+    <main class="container review-container">
+
+        <h1 class="page-title fade-up">
+            Write a Review
+        </h1>
+
+        <div class="product-card fade-up">
+
+            <div class="row align-items-center">
+
+                <div class="col-auto">
+                    <img src="assets/keyboard.jpg" class="product-image">
+                </div>
+
+                <div class="col">
+
+                    <h5 class="product-title">
+                        Review Blackwidow V3
+                    </h5>
+
+                    <p class="product-price">
+                        Rp. 1.500.000
+                    </p>
+
+                    <h6 class="rating-title">
+                        Your Rating
+                    </h6>
+
+                    <div class="rating">
+
+                        <i class="fa-solid fa-star star active"></i>
+                        <i class="fa-solid fa-star star active"></i>
+                        <i class="fa-solid fa-star star active"></i>
+                        <i class="fa-solid fa-star star active"></i>
+                        <i class="fa-solid fa-star star active"></i>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="fade-up delay-1">
+
+            <h2 class="section-title">
+                Your Review
+            </h2>
+
+            <textarea
+                class="form-control review-box"
+                id="reviewText"
+                placeholder="Text here..."
+            ></textarea>
+
+        </div>
+
+        <div class="fade-up delay-2">
+
+            <h2 class="section-title">
+                Add Photos
+                <span>(Optional)</span>
+            </h2>
+
+            <div class="photo-area">
+
+                <img src="assets/headset.jpg" class="photo">
+
+                <img src="assets/setup.jpg" class="photo">
+
+                <div class="add-photo">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+        <button class="submit-btn fade-up delay-3">
+            Submit Review
+        </button>
+
+    </main>
+
+<script>
+
+const stars = document.querySelectorAll(".star");
+
+stars.forEach((star,index)=>{
+
+    star.addEventListener("click",()=>{
+
+        stars.forEach((s,i)=>{
+
+            if(i <= index){
+                s.classList.add("active");
+            }else{
+                s.classList.remove("active");
+            }
+
+        });
+
+    });
+
+});
+
+document.querySelector(".submit-btn")
+.addEventListener("click",()=>{
+
+    const review =
+    document.getElementById("reviewText").value;
+
+    if(review.trim()===""){
+        alert("Please write your review.");
+        return;
+    }
+
+    alert("Review submitted successfully!");
+
+});
+
+</script>
+
+</body>
+</html>
