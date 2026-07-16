@@ -1,0 +1,295 @@
+/* --- PALET WARNA ULTRA KONTRAS & GAMING --- */
+:root {
+    --bg-main: #06080f;          /* Hitam pekat kebiruan */
+    --bg-nav: #0b0f19;           /* Warna gelap untuk navbar */
+    --bg-card: #121829;          /* Kontainer produk & tabs */
+    --color-neon-purple: #7b2cbf;/* Ungu Utama */
+    --color-neon-glow: #9d4edd;  /* Ungu terang untuk aksen/hover */
+    --color-cyan: #00f5d4;       /* Aksen Cyan */
+    --text-primary: #ffffff;
+    --text-secondary: #8e96af;   /* Abu-abu terang untuk sub-informasi */
+    --accent-red: #ff3366;       /* Merah neon */
+}
+
+/* --- BASE STYLES --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+/* --- NAVBAR STYLES (Memunculkan & Mempercantik Navbar) --- */
+.custom-nav {
+    background-color: var(--bg-nav) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0.75rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.logo-img {
+    height: 35px; /* Mengatur tinggi logo agar proporsional */
+    object-fit: contain;
+}
+
+/* Jika file gambar logo belum ada, teks alternatifnya akan berwarna neon */
+.navbar-brand {
+    color: var(--text-primary) !important;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.custom-nav .nav-link {
+    color: var(--text-secondary) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease;
+}
+
+.custom-nav .nav-link:hover,
+.custom-nav .nav-link.active {
+    color: var(--color-neon-glow) !important;
+}
+
+/* Tombol Aksi di Navbar Kanan */
+.nav-icon {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.nav-icon:hover {
+    background: var(--color-neon-purple);
+    color: #fff;
+    border-color: var(--color-neon-glow);
+}
+
+.avatar-box {
+    background: rgba(157, 78, 221, 0.1);
+    border-color: rgba(157, 78, 221, 0.3);
+}
+
+/* --- BREADCRUMB --- */
+.custom-breadcrumb .breadcrumb-item a {
+    color: var(--color-neon-glow);
+    text-decoration: none;
+}
+.custom-breadcrumb .breadcrumb-item.active {
+    color: var(--text-secondary);
+}
+
+/* --- DETAIL PRODUK (BAGIAN ATAS) --- */
+.product-img-display {
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.thumb-box {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background-color: var(--bg-card);
+    transition: all 0.2s ease;
+}
+
+.thumb-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.thumb-box.active, .thumb-box:hover {
+    border-color: var(--color-neon-glow);
+}
+
+.btn-wishlist {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 0.5rem 0.75rem;
+}
+
+.btn-wishlist.active i {
+    color: var(--accent-red) !important;
+}
+
+/* --- INFORMASI & AKSESORIS KANAN --- */
+.text-muted-custom {
+    color: var(--text-secondary);
+}
+
+.price-text {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Pilihan Warna */
+.color-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.color-swatch {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid var(--bg-main);
+    outline: 2px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.color-swatch.active {
+    outline: 2px solid var(--color-neon-glow);
+    transform: scale(1.1);
+}
+
+/* Counter & Tombol Beli */
+.quantity-counter {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    width: 130px;
+    padding: 0.4rem 0.8rem;
+}
+
+.btn-add {
+    background-color: var(--color-neon-purple);
+    border: none;
+    font-weight: 600;
+    padding: 0.75rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-add:hover {
+    background-color: var(--color-neon-glow);
+    box-shadow: 0 0 15px rgba(157, 78, 221, 0.4);
+}
+
+/* --- TABS SYSTEM --- */
+.custom-tabs {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+}
+
+.custom-tabs .nav-link {
+    color: var(--text-secondary) !important;
+    border: none !important;
+    background: transparent !important;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+}
+
+.custom-tabs .nav-link.active {
+    color: var(--color-neon-glow) !important;
+    border-bottom: 3px solid var(--color-neon-glow) !important;
+}
+
+.custom-tab-content {
+    background-color: var(--bg-card);
+    border-radius: 0 0 16px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: none;
+}
+
+/* --- KARTU REKOMENDASI (Sama seperti sebelumnya) --- */
+.product-card {
+    background-color: var(--bg-card);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(123, 44, 191, 0.2);
+}
+
+.img-wrapper {
+    border-radius: 16px 16px 0 0;
+}
+
+.product-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.brand-name {
+    font-size: 0.75rem;
+    color: var(--color-neon-glow);
+    letter-spacing: 1px;
+}
+
+.product-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.product-price {
+    font-size: 1.15rem;
+}
+
+.bg-neon-purple { background-color: var(--color-neon-purple); }
+.bg-cyan { background-color: var(--color-cyan); color: #06080f; font-weight: 700; }
+
+.discount-badge {
+    background-color: rgba(255, 51, 102, 0.15);
+    color: var(--accent-red);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.wishlist-btn {
+    background: rgba(6, 8, 15, 0.7);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.wishlist-btn.loved { color: var(--accent-red); }
+
+/* --- PROMO BANNER --- */
+.promo-banner {
+    background: linear-gradient(90deg, rgba(6, 8, 15, 0.9) 30%, rgba(6, 8, 15, 0.4) 100%), 
+                url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    min-height: 300px;
+    border: 1px solid rgba(157, 78, 221, 0.2);
+}
+
+.text-neon-glow {
+    color: var(--color-neon-glow);
+    text-shadow: 0 0 15px rgba(157, 78, 221, 0.6);
+}
+
+.text-light-desc { color: #c5cbde; }
+.btn-neon { background-color: var(--color-neon-purple); color: #ffffff; border: none; }
+.btn-neon:hover { background-color: var(--color-neon-glow); color: #ffffff; }
+.fw-800 { font-weight: 800; }
+.tracking-tight { letter-spacing: -1px; }
+.fs-7 { font-size: 0.8rem; }

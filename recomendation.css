@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #050811;
+    color: #eef2ff;
+    font-family: "Poppins", sans-serif;
+}
+
+.container-fluid {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #070b14 0%, #0d1323 100%);
+}
+
+.sidebar {
+    background: rgba(15, 23, 42, 0.95);
+    border-right: 1px solid rgba(148, 163, 184, 0.15);
+    min-height: 100vh;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    letter-spacing: 0.14em;
+    color: #eef2ff;
+}
+
+.logo-purple {
+    color: #8b5cf6;
+}
+
+.nav-link {
+    color: #cbd5e1;
+    background: transparent;
+    border-radius: 18px;
+    padding: 0.95rem 1.2rem;
+    transition: all 0.25s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff;
+    background: rgba(139, 92, 246, 0.18);
+    box-shadow: 0 20px 48px rgba(139, 92, 246, 0.1);
+}
+
+.main-content {
+    padding-top: 3rem;
+}
+
+.section-title {
+    color: #ffffff;
+}
+
+.text-secondary {
+    color: #9ca3af !important;
+}
+
+.product-card {
+    background: rgba(15, 23, 42, 0.98);
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 24px 68px rgba(0, 0, 0, 0.22);
+}
+
+.img-wrapper {
+    border-radius: 28px;
+    position: relative;
+    overflow: hidden;
+    background: #0b1221;
+}
+
+.product-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.img-wrapper:hover .product-img {
+    transform: scale(1.05);
+}
+
+.badge {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.5rem 0.85rem;
+    border-radius: 999px;
+}
+
+.bg-neon-purple {
+    background: linear-gradient(135deg, #c084fc, #7c3aed);
+}
+
+.bg-cyan {
+    background: linear-gradient(135deg, #22d3ee, #0ea5e9);
+}
+
+.wishlist-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 16px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    background: rgba(15, 23, 42, 0.95);
+    color: #f8fafc;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.wishlist-btn:hover {
+    transform: translateY(-1px);
+    background: rgba(139, 92, 246, 0.16);
+}
+
+.wishlist-btn.loved {
+    background: rgba(248, 113, 113, 0.18);
+    border-color: rgba(248, 113, 113, 0.3);
+    color: #f87171;
+}
+
+.brand-name {
+    color: #9ca3af;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+}
+
+.product-title {
+    color: #ffffff;
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+
+.rating {
+    gap: 0.4rem;
+}
+
+.product-price {
+    color: #f8fafc;
+    font-size: 1rem;
+}
+
+.discount-badge {
+    background: rgba(79, 70, 229, 0.14);
+    color: #d8b4fe;
+    padding: 0.45rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.78rem;
+}
+
+.promo-banner {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(30, 41, 59, 0.95));
+    border: 1px solid rgba(139, 92, 246, 0.16);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+}
+
+.promo-content {
+    position: relative;
+    z-index: 2;
+}
+
+.text-neon-glow {
+    color: #c4b5fd;
+    text-shadow: 0 0 24px rgba(196, 181, 253, 0.35);
+}
+
+.text-light-desc {
+    color: #cbd5e1;
+}
+
+.btn-neon {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: #ffffff;
+    border: none;
+    box-shadow: 0 14px 28px rgba(99, 102, 241, 0.23);
+}
+
+.btn-neon:hover {
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+}
+
+@media (max-width: 991px) {
+    .sidebar {
+        min-height: auto;
+    }
+}
