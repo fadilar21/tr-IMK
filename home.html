@@ -426,6 +426,20 @@ a{ text-decoration: none; }
 .flash-item{ display:flex; gap:.6rem; align-items:center; padding:.5rem 0; border-bottom:1px solid rgba(255,255,255,0.03);} 
 .flash-item:last-child{ border-bottom:none; }
 .flash-item img{ width:56px; height:44px; object-fit:cover; border-radius:8px; }
+.flash-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:46px;
+  height:24px;
+  padding:0 .55rem;
+  border-radius:999px;
+  background: rgba(236,72,153,0.18);
+  color: #f87171;
+  font-weight:700;
+  font-size:.76rem;
+  border: 1px solid rgba(236,72,153,0.4);
+}
 .flash-item .meta{ font-size:.85rem; }
 .flash-item .price{ color:var(--purple-400); font-weight:700; }
 .hero-banner::after{
@@ -443,11 +457,13 @@ a{ text-decoration: none; }
 }
 .hero-title{
   font-family: var(--font-display);
+  font-weight: 700;
   font-size: clamp(1.6rem, 4vw, 2.6rem);
   line-height: 1.15;
   margin: .4rem 0 .3rem;
 }
 .hero-title .accent{
+  font-weight: 700;
   background: var(--grad-brand);
   -webkit-background-clip: text;
   background-clip: text;
@@ -555,7 +571,7 @@ a{ text-decoration: none; }
       </form>
 
       <div class="d-flex align-items-center gap-2">
-        <button class="icon-btn-vk" title="Wishlist"><i class="fa-regular fa-heart"></i><span class="badge-vk">3</span></button>
+        <button class="icon-btn-vk" title="Profil"><i class="fa-regular fa-user"></i></button>
         <button class="icon-btn-vk" title="Keranjang"><i class="fa-solid fa-cart-shopping"></i><span class="badge-vk">2</span></button>
         <button class="icon-btn-vk d-md-none" id="menuToggle" title="Menu"><i class="fa-solid fa-bars"></i></button>
       </div>
@@ -606,7 +622,7 @@ a{ text-decoration: none; }
 
       <!-- PRODUCTS -->
       <div id="products" class="d-flex align-items-center justify-content-between mt-5 mb-3 reveal">
-        <h3 style="font-family:var(--font-display); font-size:1.15rem; letter-spacing:.04em;">Trending Gear</h3>
+        <h3 style="font-family:var(--font-display); font-size:1.15rem; letter-spacing:.04em;">Best Seller</h3>
         <a href="#" class="link-vk" style="font-size:.9rem;">Lihat semua <i class="fa-solid fa-chevron-right" style="font-size:.7rem;"></i></a>
       </div>
 
@@ -666,7 +682,6 @@ a{ text-decoration: none; }
 
     </section>
 
-    <!-- RIGHT PANEL: Flash Sale -->
     <aside class="col-md-3 col-lg-3 right-panel">
       <div class="flash-sale reveal">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:.6rem;">
@@ -675,9 +690,9 @@ a{ text-decoration: none; }
         </div>
 
         <div class="flash-item">
-          <img src="keyboard.jpg" alt="item">
+          <img src="keyboard2.jpg" alt="item">
           <div class="meta">
-            <div style="font-weight:700;">Razer BlackWidow V3</div>
+            <div style="display:flex; align-items:center; gap:.5rem; margin-bottom:.2rem;"><span class="flash-badge">-25%</span><span style="font-weight:700;">Razer BlackWidow V3</span></div>
             <div class="price">Rp 1.299.000</div>
           </div>
         </div>
@@ -685,7 +700,7 @@ a{ text-decoration: none; }
         <div class="flash-item">
           <img src="keyboard2.jpg" alt="item">
           <div class="meta">
-            <div style="font-weight:700;">Logitech G Pro X Superlight</div>
+            <div style="display:flex; align-items:center; gap:.5rem; margin-bottom:.2rem;"><span class="flash-badge">-15%</span><span style="font-weight:700;">Logitech G Pro X Superlight</span></div>
             <div class="price">Rp 1.299.000</div>
           </div>
         </div>
@@ -693,7 +708,7 @@ a{ text-decoration: none; }
         <div class="flash-item">
           <img src="keyboard.jpg" alt="item">
           <div class="meta">
-            <div style="font-weight:700;">Corsair K95 RGB</div>
+            <div style="display:flex; align-items:center; gap:.5rem; margin-bottom:.2rem;"><span class="flash-badge">-20%</span><span style="font-weight:700;">Corsair K95 RGB</span></div>
             <div class="price">Rp 3.499.000</div>
           </div>
         </div>
