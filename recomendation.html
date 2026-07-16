@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valkyrie - Premium Recommendation</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="recomendation.css">
+</head>
+<body>
+
+<div class="container-fluid p-0">
+    <div class="row g-0 min-vh-100">
+        
+        <!-- SIDEBAR -->
+        <nav class="col-md-3 col-lg-2 d-md-block sidebar px-3 py-4">
+            <div class="sidebar-sticky">
+                <!-- Logo Valkyrie -->
+                <div class="logo-container mb-4 text-center px-2">
+                    <img src="logo.png" alt="Valkyrie logo" class="logo-image mb-2">
+                    <h3 class="logo-text m-0">VALKYRIE</h3>
+                </div>
+
+                <div class="sidebar-actions d-flex justify-content-center justify-content-md-start gap-2 mb-4">
+                    <button class="btn nav-icon" type="button" title="Cari">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <button class="btn nav-icon" type="button" title="Keranjang">
+                        <i class="bi bi-cart3"></i>
+                    </button>
+                    <button class="btn nav-icon" type="button" title="Profile">
+                        <i class="bi bi-person-fill"></i>
+                    </button>
+                </div>
+
+                <!-- Navigation List -->
+                <ul class="nav flex-column gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-house-door-fill me-3"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="bi bi-search me-3"></i>Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-arrow-left-right me-3"></i>Compare</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-heart-fill me-3"></i>Wishlist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-cart-fill me-3"></i>Cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-box-seam-fill me-3"></i>Track Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-cpu-fill me-3"></i>Setup Builder</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-trophy-fill me-3"></i>Achievement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-person-badge-fill me-3"></i>Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="bi bi-chat-square-heart-fill me-3"></i>Review</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-5 py-5 main-content">
+            
+            <!-- Header Section -->
+            <div class="mb-5">
+                <h1 class="fw-bold text-white mb-2 section-title">Recommendation For You</h1>
+                <p class="text-secondary fs-6">Tailored perfectly based on your preferences</p>
+            </div>
+
+            <!-- Product Cards Grid -->
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
+                
+                <!-- Card 1 -->
+                <div class="col">
+                    <div class="card h-100 product-card border-0">
+                        <div class="position-relative overflow-hidden img-wrapper">
+                            <span class="badge bg-neon-purple position-absolute top-0 start-0 m-3 shadow">Best Seller</span>
+                            <button class="wishlist-btn position-absolute top-0 end-0 m-3 shadow-sm"
+                                onclick="toggleWishlist(this)" aria-label="Wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <img src="keyboard.jpg"
+                                class="card-img-top product-img" alt="Razer BlackWidow V3">
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between p-4">
+                            <div>
+                                <span class="brand-name text-uppercase fw-bold">Razer</span>
+                                <h5 class="product-title text-white mt-1 mb-2">Razer BlackWidow V3</h5>
+                                <div class="rating d-flex align-items-center mb-3">
+                                    <i class="bi bi-star-fill text-warning me-1"></i>
+                                    <span class="text-white fw-semibold fs-7">4.8</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <span class="product-price fw-bold">Rp 1.299.000</span>
+                                <span class="discount-badge">-19%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col">
+                    <div class="card h-100 product-card border-0">
+                        <div class="position-relative overflow-hidden img-wrapper">
+                            <button class="wishlist-btn position-absolute top-0 end-0 m-3 shadow-sm"
+                                onclick="toggleWishlist(this)" aria-label="Wishlist">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <img src="pc.svg"
+                                class="card-img-top product-img" alt="Corsair K95">
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between p-4">
+                            <div>
+                                <span class="brand-name text-uppercase fw-bold">Corsair</span>
+                                <h5 class="product-title text-white mt-1 mb-2">Corsair K95 RGB Platinum XT</h5>
+                                <div class="rating d-flex align-items-center mb-3">
+                                    <i class="bi bi-star-fill text-warning me-1"></i>
+                                    <span class="text-white fw-semibold fs-7">4.9</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <span class="product-price fw-bold">Rp 3.499.000</span>
+                                <span class="discount-badge">-9%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col">
+                    <div class="card h-100 product-card border-0">
+                        <div class="position-relative overflow-hidden img-wrapper">
+                            <span class="badge bg-cyan position-absolute top-0 start-0 m-3 shadow">New</span>
+                            <button class="wishlist-btn position-absolute top-0 end-0 m-3 loved shadow-sm"
+                                onclick="toggleWishlist(this)" aria-label="Wishlist">
+                                <i class="bi bi-heart-fill"></i>
+                            </button>
+                            <img src="headset.jpg"
+                                class="card-img-top product-img" alt="Logitech G Pro">
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between p-4">
+                            <div>
+                                <span class="brand-name text-uppercase fw-bold">Logitech</span>
+                                <h5 class="product-title text-white mt-1 mb-2">Logitech G Pro X Superlight</h5>
+                                <div class="rating d-flex align-items-center mb-3">
+                                    <i class="bi bi-star-fill text-warning me-1"></i>
+                                    <span class="text-white fw-semibold fs-7">4.9</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <span class="product-price fw-bold">Rp 1.890.000</span>
+                                <span class="discount-badge">-10%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Promo Banner -->
+            <div class="promo-banner rounded-4 overflow-hidden position-relative p-5 d-flex align-items-center shadow-lg">
+                <img src="bawah.svg" alt="Promo background" class="promo-bg">
+                <div class="promo-content position-relative z-2">
+                    <h1 class="display-4 fw-800 text-white mb-3 tracking-tight">Level Up Your<br><span class="text-neon-glow">Gaming Experience</span></h1>
+                    <p class="text-light-desc mb-4 fs-6">Discover premium gaming gear with exclusive deals and personalized recommendations.</p>
+                    <a href="#" class="btn btn-neon px-4 py-3 rounded-3 fw-bold shadow-lg promo-button">
+                        Shop Now <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function toggleWishlist(button) {
+        button.classList.toggle("loved");
+        const icon = button.querySelector("i");
+        icon.classList.toggle("bi-heart");
+        icon.classList.toggle("bi-heart-fill");
+    }
+</script>
+</body>
+</html>
