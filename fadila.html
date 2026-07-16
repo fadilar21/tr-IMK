@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valkyrie - Product Detail</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fadila.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-nav">
+        <div class="container">
+            <a class="navbar-brand p-0" href="#">
+                <img src="namalogo.png" alt="logo" class="logo-img">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#productDetail">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#recommendationSection">Recommendation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#description">Details</a>
+                    </li>
+                </ul>
+
+                <div class="navbar-actions d-flex align-items-center gap-2">
+                    <button type="button" class="btn nav-icon" title="Cari">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <button type="button" class="btn nav-icon" title="Keranjang">
+                        <i class="bi bi-cart3"></i>
+                    </button>
+                    <button type="button" class="btn nav-icon avatar-box" title="Akun">
+                        <i class="bi bi-person-fill fs-6 text-secondary"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5 text-white">
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb custom-breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Keyboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Razen BlackWidow V3</li>
+            </ol>
+        </nav>
+
+        <div class="row g-4">
+            <div class="col-lg-7">
+                <div class="main-product-image mb-3 position-relative">
+                    <img src="keyboard2.jpg" id="mainImage" alt="Razen BlackWidow V3"
+                        class="img-fluid product-img-display">
+                </div>
+
+                <div class="d-flex gap-2 align-items-center flex-wrap">
+                    <div class="thumb-box active" onclick="changeImage(this)">
+                        <img src="keyboard2.jpg" alt="Thumb 1">
+                    </div>
+                    <div class="thumb-box" onclick="changeImage(this)">
+                        <img src="keyboard.jpg" alt="Thumb 2">
+                    </div>
+                    <div class="thumb-box" onclick="changeImage(this)">
+                        <img src="keyboard3.jpg" alt="Thumb 3">
+                    </div>
+                    <div class="thumb-box" onclick="changeImage(this)">
+                        <img src="keyboard.jpg" alt="Thumb 4">
+                    </div>
+                    <button id="wishlistBtn" class="btn btn-wishlist ms-2" title="Tambah ke wishlist"
+                        onclick="toggleWishlist()">
+                        <i id="wishlistIcon" class="bi bi-heart text-warning fs-5"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-lg-5 ps-lg-4">
+                <h1 class="fw-bold product-title mb-1">Razen BlackWidow V3</h1>
+                <p class="text-muted-custom mb-3 fs-6">Mechanical Gaming Keyboard</p>
+
+                <div class="d-flex align-items-center gap-2 mb-4">
+                    <div class="text-warning small d-flex gap-1">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+                    <span class="small fw-semibold text-white-50">4.8 <span class="text-muted-custom">(230)</span></span>
+                    <span class="text-muted-custom ms-2 small">Terjual 1.2K</span>
+                </div>
+
+                <h2 class="fw-bold price-text mb-4">Rp1.299.000</h2>
+
+                <div class="mb-4">
+                    <label class="form-label text-muted-custom small mb-2 d-block">Pilih Warna</label>
+                    <div class="color-options">
+                        <button type="button" class="color-swatch active" style="background:#111111"
+                            data-label="Hitam" onclick="selectColor(this)" aria-label="Hitam"></button>
+                        <button type="button" class="color-swatch" style="background:#fbbf24"
+                            data-label="Kuning" onclick="selectColor(this)" aria-label="Kuning"></button>
+                        <button type="button" class="color-swatch" style="background:#4b5563"
+                            data-label="Abu-abu" onclick="selectColor(this)" aria-label="Abu-abu"></button>
+                    </div>
+                    <p id="colorSelected" class="text-secondary small mb-0">Warna dipilih: Hitam</p>
+                </div>
+
+                <p class="text-secondary small mb-4" id="stockInfo">Stock : 15 Tersedia</p>
+
+                <div class="action-row">
+                    <div class="quantity-counter d-flex align-items-center justify-content-between">
+                        <button id="minusBtn" class="btn text-white px-2 py-0 fs-5">-</button>
+                        <span id="qty" class="fw-bold text-white">1</span>
+                        <button id="plusBtn" class="btn text-white px-2 py-0 fs-5">+</button>
+                    </div>
+                    <button class="btn btn-primary btn-add mt-3 w-100">
+                        <i class="bi bi-cart-plus me-2"></i>Tambah ke Keranjang
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-tabs-container mt-5">
+            <ul class="nav nav-tabs custom-tabs" id="productTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="description-tab" data-bs-toggle="tab"
+                        data-bs-target="#description" type="button" role="tab">Description</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="specification-tab" data-bs-toggle="tab"
+                        data-bs-target="#specification" type="button" role="tab">Specification</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="reviews-tab" data-bs-toggle="tab"
+                        data-bs-target="#reviews" type="button" role="tab">Reviews (230)</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="qna-tab" data-bs-toggle="tab"
+                        data-bs-target="#qna" type="button" role="tab">Q&A</button>
+                </li>
+            </ul>
+
+            <div class="tab-content custom-tab-content p-4" id="productTabContent">
+                <div class="tab-pane fade show active" id="description" role="tabpanel">
+                    <p class="text-muted-custom mb-4">
+                        Keyboard mechanical dengan Razer Green Switch tactile dan clicky, RGB Chroma, dan desain premium untuk performa maksimal.
+                    </p>
+                    <ul class="text-muted-custom ps-3 mb-0">
+                        <li class="mb-2">Durable Green Switch</li>
+                        <li class="mb-2">RGB Backlit</li>
+                        <li class="mb-2">Full-size Layout</li>
+                        <li class="mb-0">Ergonomic Wrist Rest</li>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="specification" role="tabpanel">
+                    <p class="text-muted-custom mb-0">Spesifikasi lengkap akan ditambahkan di sini.</p>
+                </div>
+                <div class="tab-pane fade" id="reviews" role="tabpanel">
+                    <p class="text-muted-custom mb-0">Ulasan pengguna akan muncul di bagian ini.</p>
+                </div>
+                <div class="tab-pane fade" id="qna" role="tabpanel">
+                    <p class="text-muted-custom mb-0">Pertanyaan dan jawaban akan ditampilkan di sini.</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="recommendation-section mt-5">
+            <div class="mb-5">
+                <h2 class="fw-bold text-white section-title">Recommendation For You</h2>
+                <p class="text-secondary fs-6">Tailored perfectly based on your preferences</p>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
+                <div class="col">
+                    <div class="card h-100 product-card border-0">
+                        <div class="position-relative overflow-hidden img-wrapper">
+                            <span class="badge bg-neon-purple position-absolute top-0 start-0 m-3 shadow">Best Seller</span>
+                            <button class="wishlist-btn position-absolute top-0 end-0 m-3 shadow-sm"><i class="bi bi-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?q=80&w=600&auto=format&fit=crop"
+                                class="card-img-top product-img" alt="Razer BlackWidow V3">
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between p-4">
+                            <div>
+                                <span class="brand-name text-uppercase fw-bold">Razer</span>
+                                <h5 class="product-title text-white mt-1 mb-2">Razer BlackWidow V3</h5>
+                                <div class="rating d-flex align-items-center mb-3">
+                                    <i class="bi bi-star-fill text-warning me-1"></i>
+                                    <span class="text-white fw-semibold fs-7">4.8</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <span class="product-price fw-bold">Rp 1.299.000</span>
+                                <span class="discount-badge">-19%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 product-card border-0">
+                        <div class="position-relative overflow-hidden img-wrapper">
+                            <button class="wishlist-btn position-absolute top-0 end-0 m-3 shadow-sm"><i class="bi bi-heart"></i></button>
+                            <img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?q=80&w=600&auto=format&fit=crop"
+                                class="card-img-top product-img" alt="Corsair K95">
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between p-4">
+                            <div>
+                                <span class="brand-name text-uppercase fw-bold">Corsair</span>
+                                <h5 class="product-title text-white mt-1 mb-2">Corsair K95 RGB Platinum XT</h5>
+                                <div class="rating d-flex align-items-center mb-3">
+                                    <i class="bi bi-star-fill text-warning me-1"></i>
+                                    <span class="text-white fw-semibold fs-7">4.9</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <span class="product-price fw-bold">Rp 3.499.000</span>
+                                <span class="discount-badge">-9%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 product-card border-0">
+                        <div class="position-relative overflow-hidden img-wrapper">
+                            <span class="badge bg-cyan position-absolute top-0 start-0 m-3 shadow">New</span>
+                            <button class="wishlist-btn position-absolute top-0 end-0 m-3 loved shadow-sm"><i class="bi bi-heart-fill"></i></button>
+                            <img src="https://images.unsplash.com/photo-1608156639585-b3a032ef9689?q=80&w=600&auto=format&fit=crop"
+                                class="card-img-top product-img" alt="Logitech G Pro">
+                        </div>
+                        <div class="card-body d-flex flex-column justify-content-between p-4">
+                            <div>
+                                <span class="brand-name text-uppercase fw-bold">Logitech</span>
+                                <h5 class="product-title text-white mt-1 mb-2">Logitech G Pro X Superlight</h5>
+                                <div class="rating d-flex align-items-center mb-3">
+                                    <i class="bi bi-star-fill text-warning me-1"></i>
+                                    <span class="text-white fw-semibold fs-7">4.9</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <span class="product-price fw-bold">Rp 1.890.000</span>
+                                <span class="discount-badge">-10%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="promo-banner rounded-4 overflow-hidden position-relative p-5 d-flex align-items-center shadow-lg">
+                <div class="promo-content position-relative z-2">
+                    <h2 class="display-5 fw-800 text-white mb-3 tracking-tight">Level Up Your<br><span class="text-neon-glow">Gaming Experience</span></h2>
+                    <p class="text-light-desc mb-4 fs-6">Discover premium gaming gear with exclusive deals and personalized recommendations.</p>
+                    <a href="#" class="btn btn-neon px-4 py-3 rounded-3 fw-bold shadow-lg">Shop Now <i class="bi bi-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let quantity = 1;
+        let stock = 15;
+        const qty = document.getElementById("qty");
+        const stockInfo = document.getElementById("stockInfo");
+        const plusBtn = document.getElementById("plusBtn");
+        const minusBtn = document.getElementById("minusBtn");
+        const colorSelected = document.getElementById("colorSelected");
+        const wishlistIcon = document.getElementById("wishlistIcon");
+        const wishlistBtn = document.getElementById("wishlistBtn");
+
+        function updateQuantity() {
+            qty.textContent = quantity;
+            plusBtn.disabled = quantity >= stock;
+            minusBtn.disabled = quantity <= 1;
+            stockInfo.textContent = `Stock : ${stock} Tersedia`;
+        }
+
+        function toggleWishlist() {
+            wishlistBtn.classList.toggle("active");
+            if (wishlistBtn.classList.contains("active")) {
+                wishlistIcon.classList.remove("bi-heart");
+                wishlistIcon.classList.add("bi-heart-fill");
+                wishlistIcon.classList.remove("text-warning");
+                wishlistIcon.classList.add("text-danger");
+            } else {
+                wishlistIcon.classList.remove("bi-heart-fill");
+                wishlistIcon.classList.add("bi-heart");
+                wishlistIcon.classList.remove("text-danger");
+                wishlistIcon.classList.add("text-warning");
+            }
+        }
+
+        plusBtn.addEventListener("click", function () {
+            if (quantity < stock) {
+                quantity++;
+                updateQuantity();
+            }
+        });
+
+        minusBtn.addEventListener("click", function () {
+            if (quantity > 1) {
+                quantity--;
+                updateQuantity();
+            }
+        });
+
+        function changeImage(box) {
+            const img = box.querySelector("img");
+            document.getElementById("mainImage").src = img.src;
+            document.querySelectorAll(".thumb-box").forEach(function (item) {
+                item.classList.remove("active");
+            });
+            box.classList.add("active");
+        }
+
+        function selectColor(color) {
+            document.querySelectorAll(".color-swatch").forEach(function (item) {
+                item.classList.remove("active");
+            });
+            color.classList.add("active");
+            colorSelected.textContent = `Warna dipilih: ${color.dataset.label}`;
+        }
+
+        updateQuantity();
+    </script>
+</body>
+
+</html>
