@@ -1,0 +1,230 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#020817;
+    color:white;
+    font-family:'Segoe UI',sans-serif;
+    min-height:100vh;
+    overflow-x:hidden;
+    position:relative;
+}
+
+/* BACKGROUND */
+
+.background-image{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-1;
+    pointer-events:none;
+}
+
+/* NAVBAR */
+.navbar{
+    position:relative;
+    z-index:10;
+}
+
+.valkyrie-logo{
+    width:118px;
+    height:auto;
+    object-fit:contain;
+}
+
+.nav-icons{
+    gap:20px;
+}
+
+.nav-icons i{
+    font-size:22px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.nav-icons i:hover{
+    color:#9b5cff;
+    transform:scale(1.15);
+}
+
+.top-profile{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+/* MAIN */
+
+.container-fluid{
+    position:relative;
+    z-index:10;
+}
+
+/* LEFT PANEL */
+
+.side-panel{
+    margin-top:40px;
+}
+
+.info-box{
+    background:linear-gradient(
+        180deg,
+        #9045ff,
+        #5827c4
+    );
+
+    padding:15px;
+    border-radius:8px;
+    margin-bottom:12px;
+    text-align:center;
+
+    animation:fadeUp .8s ease;
+}
+
+.info-box img{
+    width:75px;
+    margin:10px 0;
+}
+
+.progress-text{
+    font-size:10px;
+    margin-top:5px;
+}
+
+.menu-stat{
+    background:linear-gradient(
+        180deg,
+        #7e35f7,
+        #5526bc
+    );
+
+    padding:12px;
+
+    border-radius:8px;
+
+    margin-bottom:12px;
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.menu-stat:hover{
+    transform:translateX(8px);
+}
+
+.menu-stat i{
+    font-size:28px;
+}
+
+.menu-stat h3{
+    margin:0;
+}
+
+/* PROFILE */
+
+.profile-title{
+    margin-top:40px;
+    font-size:2.4rem;
+    font-weight:700;
+}
+
+.profile-header{
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    margin-top:15px;
+    margin-bottom:25px;
+
+    animation:fadeUp 1s ease;
+}
+
+.profile-pic{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #5e4eff;
+}
+
+.profile-header h2{
+    margin-bottom:0;
+}
+
+.profile-header p{
+    margin-bottom:5px;
+    color:#cfcfcf;
+}
+
+.member-badge{
+    background:#7e35f7;
+    padding:4px 10px;
+    border-radius:6px;
+    font-size:14px;
+    display:inline-block;
+}
+
+/* MENU BOX */
+
+.profile-menu{
+    background:#11192d;
+    border-radius:10px;
+    overflow:hidden;
+    animation:fadeUp 1.2s ease;
+}
+
+.menu-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 20px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.menu-item:last-child{
+    border-bottom:none;
+}
+
+.menu-item:hover{
+    background:#1a2540;
+}
+
+.menu-item span{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logout{
+    color:#ff9f9f;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
