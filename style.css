@@ -1,4 +1,6 @@
-/* Variabel Warna Utama */
+/* ==========================================================================
+   1. VARIABLES & BASE STYLES (Berlaku untuk Semua Halaman)
+   ========================================================================== */
 :root {
     --bg-dark: #0a0516;
     --card-bg: rgba(18, 12, 31, 0.65);
@@ -8,7 +10,6 @@
     --text-muted: #8b8599;
 }
 
-/* Reset Base HTML & Body */
 html, body {
     height: 100%;
     margin: 0;
@@ -18,7 +19,10 @@ html, body {
     color: #fff;
 }
 
-/* Background Wrapper */
+/* ==========================================================================
+   2. LAYOUT & SHARED COMPONENTS (Dipakai Bersama di Login & Register)
+   ========================================================================== */
+/* Wrapper Latar Belakang Penuh */
 .login-wrapper {
     position: relative;
     background: url('bg.png') no-repeat center center;
@@ -29,10 +33,10 @@ html, body {
     place-items: center !important; 
     z-index: 1;
     overflow-y: auto;
-    padding: 15px; /* Padding luar di layar HP */
+    padding: 30px 15px;
 }
 
-/* Overlay Background */
+/* Overlay Efek Gelap/Cyberpunk */
 .bg-overlay {
     position: absolute;
     top: 0;
@@ -43,7 +47,7 @@ html, body {
     z-index: -1;
 }
 
-/* Card Style - Dibuat Responsif Aman di Segala Device */
+/* Kotak Card Utama */
 .login-card {
     position: relative;
     z-index: 10;
@@ -58,7 +62,7 @@ html, body {
     -webkit-backdrop-filter: blur(12px);
 }
 
-/* Menyelaraskan Logo & Brand */
+/* Logo & Teks Brand */
 .logo-container {
     display: flex;
     flex-direction: column;
@@ -86,7 +90,7 @@ html, body {
     color: var(--text-muted) !important;
 }
 
-/* Custom Input Field */
+/* Style Input Form */
 .input-group-custom {
     position: relative;
     display: flex;
@@ -105,7 +109,7 @@ html, body {
     transition: all 0.3s ease;
 }
 
-/* 🔴 Trik CSS Supaya Placeholder Titik-Titik Hilang saat Fokus 🔴 */
+/* Trik Efek Placeholder Hilang Saat Diklik */
 .form-control-cyber:focus::placeholder {
     color: transparent !important;
 }
@@ -123,6 +127,7 @@ html, body {
     outline: none;
 }
 
+/* Posisi Ikon di Input */
 .input-icon {
     position: absolute;
     left: 14px;
@@ -141,7 +146,7 @@ html, body {
     align-items: center;
 }
 
-/* Link Style */
+/* Link Navigasi & Lupa Password */
 .forgot-link, .signup-link {
     color: var(--neon-purple) !important;
     font-size: 0.85rem;
@@ -152,25 +157,7 @@ html, body {
     opacity: 0.8;
 }
 
-/* Tombol Login Utama */
-.btn-login {
-    width: 100% !important;
-    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
-    border: none;
-    border-radius: 8px;
-    padding: 12px;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
-    transition: all 0.3s ease;
-}
-
-.btn-login:hover {
-    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
-    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
-    transform: translateY(-1px);
-}
-
-/* Separator OR Line */
+/* Garis Pembatas OR */
 .separator {
     display: flex;
     align-items: center;
@@ -193,7 +180,7 @@ html, body {
     margin-left: .5em;
 }
 
-/* SSO Buttons */
+/* Tombol Sosial Media (SSO Google & Discord) */
 .btn-sso {
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -212,10 +199,45 @@ html, body {
     color: #fff;
 }
 
-/* 🔴 MEDIA QUERY BIAR DI HP RESPONSIVE NYAMAN 🔴 */
+/* ==========================================================================
+   3. EXCLUSIVE STYLES (Spesifik Tombol / Komponen Tertentu)
+   ========================================================================== */
+/* Tombol Utama (Bisa Login / Register) */
+.btn-login {
+    width: 100% !important;
+    background: linear-gradient(90deg, #9333ea 0%, #a855f7 100%);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(90deg, #a855f7 0%, #c084fc 100%);
+    box-shadow: 0 4px 25px rgba(168, 85, 247, 0.6);
+    transform: translateY(-1px);
+}
+
+/* Khusus Komponen Checkbox di Halaman Register */
+.form-check-custom {
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-check-input-cyber {
+    accent-color: var(--neon-purple);
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Media Queries untuk Mobile/HP)
+   ========================================================================== */
 @media (max-width: 480px) {
     .login-card {
-        padding: 1.5rem !important; /* Mempersempit padding dalam jika layar kecil */
+        padding: 1.5rem !important; /* Memperkecil padding di layar HP agar muat */
     }
     .brand-name {
         font-size: 1.4rem;
