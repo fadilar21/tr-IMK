@@ -41,6 +41,28 @@ body {
   margin-bottom: 2rem;
 }
 
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+  width: 400px;
+  transition: var(--transition-fast);
+}
+
+.search-input:focus {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 10px rgba(111, 66, 193, 0.3);
+  outline: none;
+  color: white;
+}
+
 .btn-valkyrie {
   background-color: var(--accent-purple);
   color: white;
@@ -54,6 +76,40 @@ body {
 .btn-valkyrie:hover {
   background-color: var(--accent-purple-hover);
   color: white;
+}
+
+.page-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+}
+
+.page-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-section.d-none {
+  display: none;
+}
+
+.switch-option {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 0.65rem 1.2rem;
+  cursor: pointer;
+  min-width: 110px;
+  text-align: center;
+  transition: var(--transition-fast);
+  background-color: rgba(255, 255, 255, 0.03);
+  color: var(--text-gray);
+}
+
+.switch-option:hover,
+.switch-option.active {
+  border-color: var(--accent-purple);
+  background-color: rgba(111, 66, 193, 0.15);
+  color: #ffffff;
 }
 
 .hero-banner {
@@ -214,4 +270,52 @@ body {
   border: 1px solid rgba(255, 80, 80, 0.35);
   border-radius: 999px;
   padding: 0.2rem 0.55rem;
+}
+
+.compare-card {
+  background: rgba(16, 19, 34, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.compare-card-header {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.compare-card-img {
+  width: auto;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.compare-card-body {
+  margin-top: 1rem;
+}
+
+.compare-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.compare-row:last-child {
+  border-bottom: none;
+}
+
+.compare-label {
+  color: var(--text-gray);
+  font-size: 0.9rem;
+}
+
+.compare-value {
+  color: #ffffff;
+  font-weight: 700;
 }

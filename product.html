@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
@@ -19,10 +19,15 @@
       </div>
     </header>
 
-    <section class="row g-4 mb-5">
-      <div class="col-md-4">
-        <div class="product-card p-3">
-          <span class="badge bg-purple badge-tag">Best Seller</span>
+    <section id="page-home" class="page-section visible">
+      <div class="mb-4">
+        <h3 class="fw-bold mb-1">Recommendation For You</h3>
+        <p class="text-secondary mb-3">Pilihan produk terbaik untuk meningkatkan pengalaman gaming Anda.</p>
+      </div>
+      <div class="row g-4 mb-5">
+        <div class="col-md-4">
+          <div class="product-card p-3" onclick="viewProductDetail()">
+            <span class="badge bg-purple badge-tag">Best Seller</span>
           <div class="product-img">
             <img src="item Razer BlackWidow V3.png" class="img-fluid" alt="Razer BlackWidow V3">
           </div>
@@ -36,7 +41,7 @@
       </div>
 
       <div class="col-md-4">
-        <div class="product-card p-3">
+        <div class="product-card p-3" onclick="viewProductDetail()">
           <span class="badge bg-info badge-tag">Popular</span>
           <div class="product-img">
             <img src="item Logitech.png" class="img-fluid" alt="Logitech G Pro X">
@@ -51,7 +56,7 @@
       </div>
 
       <div class="col-md-4">
-        <div class="product-card p-3">
+        <div class="product-card p-3" onclick="viewProductDetail()">
           <span class="badge bg-purple badge-tag" style="background-color: var(--accent-purple);">Monitor</span>
           <div class="product-img">
             <img src="item Asus ROG.png" class="img-fluid" alt="ASUS ROG Swift PG279QM">
@@ -66,7 +71,7 @@
       </div>
 
       <div class="col-md-4">
-        <div class="product-card p-3">
+        <div class="product-card p-3" onclick="viewProductDetail()">
           <span class="badge bg-info badge-tag">Bundle</span>
           <div class="product-img">
             <img src="item PC Full Set.png" class="img-fluid" alt="PC Full set 24 INC GAMING RYZEN 5">
@@ -81,7 +86,7 @@
       </div>
 
       <div class="col-md-4">
-        <div class="product-card p-3">
+        <div class="product-card p-3" onclick="viewProductDetail()">
           <span class="badge bg-primary badge-tag">Premium</span>
           <div class="product-img">
             <img src="item Logitech.png" class="img-fluid" alt="Logitech G502 HERO">
@@ -96,7 +101,7 @@
       </div>
 
       <div class="col-md-4">
-        <div class="product-card p-3">
+        <div class="product-card p-3" onclick="viewProductDetail()">
           <span class="badge bg-info badge-tag">New</span>
           <div class="product-img">
             <img src="item Razer Kraken.png" class="img-fluid" alt="Razer Kraken V4 Pro">
@@ -110,6 +115,130 @@
         </div>
       </div>
     </section>
+
+    <section id="page-detail" class="page-section d-none">
+      <button class="btn btn-link text-secondary p-0 mb-4" onclick="showHomePage()"><i class="bi bi-chevron-left"></i> Kembali</button>
+      <div class="text-secondary small mb-3">Home / Keyboard / Razer BlackWidow V3</div>
+      <div class="row g-5">
+        <div class="col-md-6">
+          <div class="p-4 rounded text-center mb-3" style="background-color: var(--bg-sidebar); border: 1px solid rgba(255, 255, 255, 0.05);">
+            <img id="detailMainImg" src="item Razer BlackWidow V3.png" class="img-fluid" alt="Razer BlackWidow V3" style="max-height: 320px; object-fit: contain; width: 100%;">
+          </div>
+          <div class="d-flex gap-2">
+            <div class="border border-secondary rounded p-1 opacity-70" style="width: 65px; height: 65px; cursor:pointer;" onclick="changeDetailImage('keyboard.jpg')">
+              <img src="keyboard.jpg" class="w-100 h-100" style="object-fit: cover;">
+            </div>
+            <div class="border border-secondary rounded p-1 opacity-70" style="width: 65px; height: 65px; cursor:pointer;" onclick="changeDetailImage('keyboard2.jpg')">
+              <img src="keyboard2.jpg" class="w-100 h-100" style="object-fit: cover;">
+            </div>
+            <div class="border border-secondary rounded p-1 opacity-70 d-flex align-items-center justify-content-center" style="width: 65px; height: 65px; background: rgba(255,255,255,0.02);">
+              <i class="bi bi-heart fs-4 text-warning"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <h2 class="fw-bold mb-1">Razer BlackWidow V3</h2>
+          <p class="text-secondary mb-3">Mechanical Gaming Keyboard</p>
+          <div class="d-flex align-items-center gap-2 mb-4">
+            <span class="text-warning"><i class="bi bi-star-fill"></i> 4.8 (230)</span>
+            <span class="text-secondary">|</span>
+            <span class="text-secondary">Terjual 1.2K</span>
+          </div>
+          <h3 class="fw-bold text-white mb-4">Rp 1.299.000</h3>
+          <div class="mb-4">
+            <div class="text-secondary small mb-2">Switch Type</div>
+            <div class="d-flex gap-2">
+              <div class="switch-option active" onclick="toggleSwitch(this)">Razer Green</div>
+              <div class="switch-option" onclick="toggleSwitch(this)">Razer Yellow</div>
+              <div class="switch-option" onclick="toggleSwitch(this)">Razer Orange</div>
+            </div>
+          </div>
+          <div class="text-secondary small mb-3">Stock: 15 Tersedia</div>
+          <div class="d-flex align-items-center gap-3 flex-wrap">
+            <div class="d-flex align-items-center rounded bg-dark" style="border: 1px solid rgba(255,255,255,0.1);">
+              <button class="btn text-white px-3" onclick="adjustCount(-1)">-</button>
+              <span id="counterVal" class="px-2 fw-bold">1</span>
+              <button class="btn text-white px-3" onclick="adjustCount(1)">+</button>
+            </div>
+            <button class="btn btn-outline-light px-4" onclick="triggerCartAnim()">Add to Cart</button>
+            <button class="btn btn-valkyrie px-4">Buy Now</button>
+          </div>
+        </div>
+      </div>
+      <div class="mt-5 border-top border-secondary pt-4">
+        <ul class="nav nav-tabs border-0 gap-4 mb-3">
+          <li class="nav-item"><a class="nav-link active p-0 bg-transparent text-white border-0 border-bottom border-2" href="#" style="border-color: var(--accent-purple) !important;">Description</a></li>
+          <li class="nav-item"><a class="nav-link p-0 bg-transparent text-secondary border-0" href="#">Specification</a></li>
+          <li class="nav-item"><a class="nav-link p-0 bg-transparent text-secondary border-0" href="#">Reviews (230)</a></li>
+          <li class="nav-item"><a class="nav-link p-0 bg-transparent text-secondary border-0" href="#">Q&A</a></li>
+        </ul>
+        <p class="text-secondary" style="font-size: 0.95rem; line-height: 1.6;">
+          Keyboard mechanical dengan Razer Green Switch tactile dan clicky, RGB Chroma, serta desain premium untuk performa maksimal.<br>
+          • Durable Green Switch<br>
+          • RGB Backlit<br>
+          • Full-size Layout<br>
+          • Ergonomic Wrist Rest
+        </p>
+      </div>
+    </section>
   </main>
+
+  <script>
+    function viewProductDetail() {
+      const home = document.getElementById('page-home');
+      const detail = document.getElementById('page-detail');
+      if (home && detail) {
+        home.classList.remove('visible');
+        home.classList.add('d-none');
+        detail.classList.remove('d-none');
+        setTimeout(() => detail.classList.add('visible'), 20);
+      }
+    }
+
+    function showHomePage() {
+      const home = document.getElementById('page-home');
+      const detail = document.getElementById('page-detail');
+      if (home && detail) {
+        detail.classList.remove('visible');
+        detail.classList.add('d-none');
+        home.classList.remove('d-none');
+        setTimeout(() => home.classList.add('visible'), 20);
+      }
+    }
+
+    function changeDetailImage(src) {
+      const img = document.getElementById('detailMainImg');
+      if (!img) return;
+      img.style.opacity = '0';
+      setTimeout(() => {
+        img.src = src;
+        img.style.opacity = '1';
+      }, 200);
+    }
+
+    function toggleSwitch(elem) {
+      document.querySelectorAll('.switch-option').forEach(opt => opt.classList.remove('active'));
+      elem.classList.add('active');
+    }
+
+    function adjustCount(value) {
+      const counter = document.getElementById('counterVal');
+      let current = parseInt(counter.innerText, 10) || 1;
+      current = Math.max(1, current + value);
+      counter.innerText = current;
+    }
+
+    function triggerCartAnim() {
+      const icon = document.querySelector('.bi-cart3');
+      if (!icon) return;
+      icon.style.transition = 'transform 0.15s ease-in-out';
+      icon.style.transform = 'scale(1.4) rotate(-15deg)';
+      setTimeout(() => {
+        icon.style.transform = 'scale(1) rotate(0deg)';
+        alert('Item ditambahkan ke keranjang!');
+      }, 200);
+    }
+  </script>
 </body>
 </html>
+

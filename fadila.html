@@ -637,41 +637,65 @@
 <!-- product comp -->
     <section id="page-compare" class="page-section d-none">
       <h3 class="fw-bold mb-1">Compare Products</h3>
-      <p class="text-secondary mb-4">Side-by-side technical specs</p>
+      <p class="text-secondary mb-4">Compare each product feature by feature</p>
 
-      <div class="table-responsive">
-        <table class="table table-dark comparison-table text-center">
-          <thead>
-            <tr>
-              <th scope="col" style="width: 25%;" class="text-start">Features</th>
-              <th scope="col" style="width: 25%;">
-                <img src="./keyboard.jpg" class="mb-2" style="height: 80px; object-fit: contain;"><br>
-                <div class="small fw-bold text-white">Razer BlackWidow V3</div>
-              </th>
-              <th scope="col" style="width: 25%;">
-                <img src="item Logitech.png" class="mb-2" style="height: 80px; object-fit: contain;"><br>
-                <div class="small fw-bold text-white">Logitech G Pro X</div>
-              </th>
-              <th scope="col" style="width: 25%;">
-                <img src="./keyboard2.jpg" class="mb-2" style="height: 80px; object-fit: contain;"><br>
-                <div class="small fw-bold text-white">HyperX Alloy Origins</div>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td class="text-start text-secondary fw-bold">Price</td><td class="text-white fw-bold">Rp1.299.000</td><td class="text-white fw-bold">Rp 1.890.000</td><td class="text-white fw-bold">3.499.000</td></tr>
-            <tr><td class="text-start text-secondary fw-bold">Switch</td><td>Razer Green</td><td>GX Blue</td><td>HyperX Red</td></tr>
-            <tr><td class="text-start text-secondary fw-bold">RGB</td><td class="text-success"><i class="bi bi-check-lg fs-5"></i></td><td class="text-success"><i class="bi bi-check-lg fs-5"></i></td><td class="text-success"><i class="bi bi-check-lg fs-5"></i></td></tr>
-            <tr><td class="text-start text-secondary fw-bold">Wrist Rest</td><td class="text-success"><i class="bi bi-check-lg fs-5"></i></td><td class="text-success"><i class="bi bi-check-lg fs-5"></i></td><td class="text-danger"><i class="bi bi-x-lg fs-5"></i></td></tr>
-            <tr><td class="text-start text-secondary fw-bold">Connectivity</td><td>Wired</td><td>Wired</td><td>Wired</td></tr>
-            <tr><td class="text-start text-secondary fw-bold">Weight</td><td>1211 g</td><td>1010 g</td><td>1075 g</td></tr>
-            <tr><td class="text-start text-secondary fw-bold">Rating</td><td class="text-warning"><i class="bi bi-star-fill me-1"></i>4.8</td><td class="text-warning"><i class="bi bi-star-fill me-1"></i>4.9</td><td class="text-warning"><i class="bi bi-star-fill me-1"></i>4.6</td></tr>
-            <tr><td></td><td><button class="btn btn-valkyrie btn-sm w-100" onclick="triggerCartAnim()">Add to Cart</button></td><td><button class="btn btn-valkyrie btn-sm w-100" onclick="triggerCartAnim()">Add to Cart</button></td><td><button class="btn btn-valkyrie btn-sm w-100" onclick="triggerCartAnim()">Add to Cart</button></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="compare-card p-4">
+            <div class="compare-card-header text-center mb-4">
+              <img src="./keyboard.jpg" class="compare-card-img mb-3" alt="Razer BlackWidow V3">
+              <div class="small fw-bold text-white">Razer BlackWidow V3</div>
+            </div>
+            <div class="compare-card-body">
+              <div class="compare-row"><span class="compare-label">Price</span><span class="compare-value">Rp 1.299.000</span></div>
+              <div class="compare-row"><span class="compare-label">Switch</span><span>Razer Green</span></div>
+              <div class="compare-row"><span class="compare-label">RGB</span><span class="text-success"><i class="bi bi-check-lg fs-5"></i></span></div>
+              <div class="compare-row"><span class="compare-label">Wrist Rest</span><span class="text-success"><i class="bi bi-check-lg fs-5"></i></span></div>
+              <div class="compare-row"><span class="compare-label">Connectivity</span><span>Wired</span></div>
+              <div class="compare-row"><span class="compare-label">Weight</span><span>1211 g</span></div>
+              <div class="compare-row"><span class="compare-label">Rating</span><span class="text-warning"><i class="bi bi-star-fill me-1"></i>4.8</span></div>
+            </div>
+            <button class="btn btn-valkyrie btn-sm w-100 mt-3" onclick="triggerCartAnim()">Add to Cart</button>
+          </div>
+        </div>
 
+        <div class="col-lg-4">
+          <div class="compare-card p-4">
+            <div class="compare-card-header text-center mb-4">
+              <img src="item Logitech.png" class="compare-card-img mb-3" alt="Logitech G Pro X">
+              <div class="small fw-bold text-white">Logitech G Pro X</div>
+            </div>
+            <div class="compare-card-body">
+              <div class="compare-row"><span class="compare-label">Price</span><span class="compare-value">Rp 1.890.000</span></div>
+              <div class="compare-row"><span class="compare-label">Switch</span><span>GX Blue</span></div>
+              <div class="compare-row"><span class="compare-label">RGB</span><span class="text-success"><i class="bi bi-check-lg fs-5"></i></span></div>
+              <div class="compare-row"><span class="compare-label">Wrist Rest</span><span class="text-success"><i class="bi bi-check-lg fs-5"></i></span></div>
+              <div class="compare-row"><span class="compare-label">Connectivity</span><span>Wired</span></div>
+              <div class="compare-row"><span class="compare-label">Weight</span><span>1010 g</span></div>
+              <div class="compare-row"><span class="compare-label">Rating</span><span class="text-warning"><i class="bi bi-star-fill me-1"></i>4.9</span></div>
+            </div>
+            <button class="btn btn-valkyrie btn-sm w-100 mt-3" onclick="triggerCartAnim()">Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div class="compare-card p-4">
+            <div class="compare-card-header text-center mb-4">
+              <img src="./keyboard2.jpg" class="compare-card-img mb-3" alt="HyperX Alloy Origins">
+              <div class="small fw-bold text-white">HyperX Alloy Origins</div>
+            </div>
+            <div class="compare-card-body">
+              <div class="compare-row"><span class="compare-label">Price</span><span class="compare-value">Rp 3.499.000</span></div>
+              <div class="compare-row"><span class="compare-label">Switch</span><span>HyperX Red</span></div>
+              <div class="compare-row"><span class="compare-label">RGB</span><span class="text-success"><i class="bi bi-check-lg fs-5"></i></span></div>
+              <div class="compare-row"><span class="compare-label">Wrist Rest</span><span class="text-danger"><i class="bi bi-x-lg fs-5"></i></span></div>
+              <div class="compare-row"><span class="compare-label">Connectivity</span><span>Wired</span></div>
+              <div class="compare-row"><span class="compare-label">Weight</span><span>1075 g</span></div>
+              <div class="compare-row"><span class="compare-label">Rating</span><span class="text-warning"><i class="bi bi-star-fill me-1"></i>4.6</span></div>
+            </div>
+            <button class="btn btn-valkyrie btn-sm w-100 mt-3" onclick="triggerCartAnim()">Add to Cart</button>
+          </div>
+        </div>
   </main>
 
   <script>
