@@ -928,17 +928,23 @@
 <div class="app-shell">
   
   <!-- TOPBAR -->
-  <div class="topbar">
+  <!-- Bagian TOPBAR - Tambahkan navigasi -->
+<div class="topbar">
     <div class="brand-top">
-      <!-- Mengganti elemen SVG lama dengan logo.png di pojok kiri atas -->
-      <img class="brand-logo" src="logo.png" alt="Valkyrie Logo">
-      <span class="brand-name">VALKYRIE</span>
+      <a href="home.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+        <img class="brand-logo" src="logo.png" alt="Valkyrie Logo">
+        <span class="brand-name">VALKYRIE</span>
+      </a>
     </div>
     
     <div class="topbar-actions">
-      <div class="icon-btn"><i class="fa-solid fa-magnifying-glass"></i></div>
-      <div class="icon-btn"><i class="fa-solid fa-cart-shopping"></i></div>
-      <div class="icon-btn"><i class="fa-solid fa-xmark"></i></div>
+      <div class="icon-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></div>
+      <a href="cart.html" class="icon-btn" title="Cart" style="text-decoration: none; color: inherit;">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+      <a href="home.html" class="icon-btn" title="Back to Home" style="text-decoration: none; color: inherit;">
+        <i class="fa-solid fa-xmark"></i>
+      </a>
     </div>
   </div>
 
