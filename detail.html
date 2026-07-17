@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valkyrie Product Detail</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="product.css" rel="stylesheet">
+</head>
+<body>
+  <main class="main-content">
+    <header class="top-header mb-4">
+      <div class="d-flex align-items-center gap-3 ms-auto">
+        <button class="btn btn-link text-white p-0"><i class="bi bi-search fs-5"></i></button>
+        <button class="btn btn-link text-white p-0 position-relative" onclick="triggerCartAnim()">
+          <i class="bi bi-cart3 fs-5"></i>
+        </button>
+        <img src="profile.png" alt="User" class="rounded-circle" style="width: 35px; height: 35px; border: 2px solid var(--accent-purple);">
+      </div>
+    </header>
+
+    <div class="text-secondary small mb-3">Home / Keyboard / Razer BlackWidow V3</div>
+
+    <div class="row g-5">
+      <div class="col-md-6">
+        <div class="p-4 rounded text-center mb-3" style="background-color: var(--bg-sidebar); border: 1px solid rgba(255, 255, 255, 0.05);">
+          <img id="detailMainImg" src="item Razer BlackWidow V3.png" class="img-fluid" alt="Razer BlackWidow V3" style="max-height: 320px; object-fit: contain; width: 100%;">
+        </div>
+        <div class="d-flex gap-2">
+          <div class="border border-secondary rounded p-1 opacity-70" style="width: 65px; height: 65px; cursor:pointer;" onclick="changeDetailImage('keyboard.jpg')">
+            <img src="keyboard.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Keyboard preview 1">
+          </div>
+          <div class="border border-secondary rounded p-1 opacity-70" style="width: 65px; height: 65px; cursor:pointer;" onclick="changeDetailImage('keyboard2.jpg')">
+            <img src="keyboard2.jpg" class="w-100 h-100" style="object-fit: cover;" alt="Keyboard preview 2">
+          </div>
+          <div class="border border-secondary rounded p-1 opacity-70 d-flex align-items-center justify-content-center" style="width: 65px; height: 65px; background: rgba(255,255,255,0.02);">
+            <i class="bi bi-heart fs-4 text-warning"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-1">Razer BlackWidow V3</h2>
+        <p class="text-secondary mb-3">Mechanical Gaming Keyboard</p>
+
+        <div class="d-flex align-items-center gap-2 mb-4">
+          <span class="text-warning"><i class="bi bi-star-fill"></i> 4.8 (230)</span>
+          <span class="text-secondary">|</span>
+          <span class="text-secondary">Terjual 1.2K</span>
+        </div>
+
+        <h3 class="fw-bold text-white mb-4">Rp 1.299.000</h3>
+
+        <div class="mb-4">
+          <div class="text-secondary small mb-2">Switch Type</div>
+          <div class="d-flex gap-2 flex-wrap">
+            <div class="switch-option active" onclick="toggleSwitch(this)">Razer Green</div>
+            <div class="switch-option" onclick="toggleSwitch(this)">Razer Yellow</div>
+            <div class="switch-option" onclick="toggleSwitch(this)">Razer Orange</div>
+          </div>
+        </div>
+
+        <div class="text-secondary small mb-3">Stock: 15 Tersedia</div>
+
+        <div class="d-flex align-items-center gap-3 flex-wrap">
+          <div class="d-flex align-items-center rounded bg-dark" style="border: 1px solid rgba(255,255,255,0.1);">
+            <button class="btn text-white px-3" onclick="adjustCount(-1)">-</button>
+            <span id="counterVal" class="px-2 fw-bold">1</span>
+            <button class="btn text-white px-3" onclick="adjustCount(1)">+</button>
+          </div>
+          <button class="btn btn-outline-light px-4" onclick="triggerCartAnim()">Add to Cart</button>
+          <button class="btn btn-valkyrie px-4">Buy Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-5 border-top border-secondary pt-4">
+      <ul class="nav nav-tabs border-0 gap-4 mb-3">
+        <li class="nav-item"><a class="nav-link active p-0 bg-transparent text-white border-0 border-bottom border-2" href="#" style="border-color: var(--accent-purple) !important;">Description</a></li>
+        <li class="nav-item"><a class="nav-link p-0 bg-transparent text-secondary border-0" href="#">Specification</a></li>
+        <li class="nav-item"><a class="nav-link p-0 bg-transparent text-secondary border-0" href="#">Reviews (230)</a></li>
+        <li class="nav-item"><a class="nav-link p-0 bg-transparent text-secondary border-0" href="#">Q&A</a></li>
+      </ul>
+      <p class="text-secondary" style="font-size: 0.95rem; line-height: 1.6;">
+        Keyboard mechanical dengan Razer Green Switch tactile dan clicky, RGB Chroma, serta desain premium untuk performa maksimal.<br>
+        - Durable Green Switch<br>
+        - RGB Backlit<br>
+        - Full-size Layout<br>
+        - Ergonomic Wrist Rest
+      </p>
+    </div>
+  </main>
+
+  <script>
+    function changeDetailImage(src) {
+      const img = document.getElementById('detailMainImg');
+      if (!img) return;
+      img.style.opacity = '0';
+      img.style.transition = 'opacity 0.2s ease';
+      setTimeout(() => {
+        img.src = src;
+        img.style.opacity = '1';
+      }, 200);
+    }
+
+    function toggleSwitch(elem) {
+      document.querySelectorAll('.switch-option').forEach(opt => opt.classList.remove('active'));
+      elem.classList.add('active');
+    }
+
+    function adjustCount(value) {
+      const counter = document.getElementById('counterVal');
+      let current = parseInt(counter.innerText, 10) || 1;
+      current = Math.max(1, current + value);
+      counter.innerText = current;
+    }
+
+    function triggerCartAnim() {
+      const icon = document.querySelector('.bi-cart3');
+      if (!icon) return;
+      icon.style.transition = 'transform 0.15s ease-in-out';
+      icon.style.transform = 'scale(1.4) rotate(-15deg)';
+      setTimeout(() => {
+        icon.style.transform = 'scale(1) rotate(0deg)';
+        alert('Item ditambahkan ke keranjang!');
+      }, 200);
+    }
+  </script>
+</body>
+</html>
